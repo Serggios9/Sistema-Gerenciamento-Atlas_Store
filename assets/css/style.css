@@ -147,7 +147,6 @@ header nav {
 
 main {
     margin-top: 40px; /* espaço para não ficar escondido */
-    background-color: black;
 }
 
 .apresentacao {
@@ -155,8 +154,9 @@ main {
   height: 100vh;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, black, rgba(0, 0, 0, 0)),
-              url("../images/apresentacao/img-background-index-greys.png");
+  background:   linear-gradient(to right, black, rgba(0, 0, 0, 0)), /*degradê 1*/
+                linear-gradient(to bottom, black, rgba(0, 0, 0, 0)), /*degradê 2*/
+                url("../images/apresentacao/img-apresentacao-backgroundtwo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -166,63 +166,127 @@ main {
 /*TEXTOS*/
 .apresentacao-textos {
     flex: 1; /*Ocupa metade da largura disponível*/
+    height: 100vh;
     max-width: 50%;
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    padding-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    background-color: transparent !important;
+    justify-content: center;
+    padding-left: 40px !important;
+    background-color: transparent;
 }
 
-.apresentacao-textos h2 { /*NOVA COLEÇÃO*/
-    font-size: 12px;
-    color: orangered;
-    margin-bottom: 20px;
-    background-color: transparent !important;
+.slogan-um {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: grey;
+    font-size: 1px;
+    white-space: nowrap;
+    margin-right: 40px;
 }
 
-.apresentacao-textos h3 { /*VESTE COM ATITUDE*/
-    font-size: 60px;
+.slogan-um span i {
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: grey;
+    margin-right: 10px;
+}
+
+.slogan-um .texto {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    letter-spacing: 5px ;
+    font-size: 8px;
+}
+
+.apresentacao-textos h3 {
+    font-size: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     color: white;
     padding-bottom: 5px;
-    background-color: transparent !important;
+    letter-spacing: 2px;
+    margin-right: 40px;
 }
 
 .apresentacao-textos h3 span {
     color: orangered;
     display: block;
-    background-color: transparent !important;
 }
 
-.apresentacao-textos p {
+.apresentacao-textos .texto-um {
     font-size: 16px;
     color: grey;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-right: 20px;
-    background-color: transparent !important;
+    margin-right: 40px;
+}
+
+.apresentacao-textos .texto-dois {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: grey;
+    font-size: 10px;
+    white-space: nowrap;
+    margin-right: 40px;
+    justify-content: space-between;
+}
+
+/*ÍCONES*/
+.menu-icons {
+    display: flex ;
+    justify-content: space-between;
+    gap: 18px;
+    margin-right: 40px;
+    padding: 20px;
+    padding-left: 0;
+    margin-bottom: 20px;    
+}
+
+.item {
+    color: lightgrey;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.texto {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /*BOTÕES*/
 
 .apresentacao-botoes {
-    margin-right: 25px;
+    margin-right: 40px;
     background-color: transparent !important;
 }
 
 .btn-colecao {
     display: inline-block;
-    color: white;
+    color: black;
     background-color: orangered;
     border: 1px solid orangered;
-    border-radius: 6px;
     padding: 15px;
     transition: all 0.1s ease;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
     text-decoration: none;
     font-weight: bolder;
-    font-size: 13px
+    letter-spacing: 2px;
+    font-size: 12px
 }
 
 .btn-colecao i {
@@ -232,26 +296,28 @@ main {
 }
 
 .btn-colecao:hover {
-    transform: translateY(-2px);
+    transition: all ease 0.25s;
     background-color: rgb(255, 60, 0);
+    color: lightgray !important;
 }
 
 .btn-esportiva {
     color: white;
-    margin-left: 15px;
-    border: 1px solid rgba(169, 169, 169, 0.406);
-    border-radius: 6px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    border: 1px solid white;
     text-decoration: none;
     padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    border-radius: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-weight: bolder;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .btn-esportiva:hover {
     border-color: orangered;
-    transition: all 0.3s ease; /*Animação suave*/
+    transition: all 0.25s ease;
 }
 
 /*MENU CENTRAL*/
@@ -301,7 +367,7 @@ main {
     border-bottom: 2px solid white;
 }
 
-    /*RODAPÉ*/
+/*RODAPÉ*/
 
 
     .logo-rodape {
@@ -311,19 +377,35 @@ main {
     .rodape {
         border-top: 1px solid grey;
         background-color: black;
-        padding-left: 20px;
         display: flex;
         max-width: 100%;
         height: 20vh;
         color: white;
-        gap: 120px;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
         align-items: center;
         margin-top: 15px;
     }
+
     .rodape-titulo {
         text-transform: uppercase;
         font-size: small;
         margin-bottom: 10px;
+    }
+
+    .rodape-ativo {
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid orangered;
+        display: inline-block !important;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-ativo:hover {
+        border-bottom: 1px solid white;
+        transition: ease all 0.25s;
     }
 
     .rodape-links {
@@ -373,8 +455,6 @@ main {
         color: red;
         transition: all ease 0.25s;
     }
-
-
 
 /*RESPONSIVIDADE*/
 @media (max-width: 768px) {

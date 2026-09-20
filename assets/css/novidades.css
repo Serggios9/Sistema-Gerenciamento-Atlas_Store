@@ -347,19 +347,35 @@
     .rodape {
         border-top: 1px solid grey;
         background-color: black;
-        padding-left: 20px;
         display: flex;
         max-width: 100%;
         height: 20vh;
         color: white;
-        gap: 120px;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
         align-items: center;
         margin-top: 15px;
     }
+
     .rodape-titulo {
         text-transform: uppercase;
         font-size: small;
         margin-bottom: 10px;
+    }
+
+    .rodape-ativo {
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid orangered;
+        display: inline-block !important;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-ativo:hover {
+        border-bottom: 1px solid white;
+        transition: ease all 0.25s;
     }
 
     .rodape-links {
