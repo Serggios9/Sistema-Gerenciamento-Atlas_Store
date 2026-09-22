@@ -108,7 +108,7 @@ header nav {
     color: white;
     text-decoration: none;
     border: 1px solid rgba(169, 169, 169, 0.406);
-    border-radius: 6px;
+    border-radius: 2px;
     padding: 4px;
     padding-left: 14px;
     padding-right: 14px;
@@ -298,7 +298,7 @@ main {
 .btn-colecao:hover {
     transition: all ease 0.25s;
     background-color: rgb(255, 60, 0);
-    color: lightgray !important;
+    color: white !important;
 }
 
 .btn-esportiva {

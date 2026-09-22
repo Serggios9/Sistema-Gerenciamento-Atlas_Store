@@ -35,7 +35,7 @@
 
     <main>
 
-        <section class="apresentacao-novidades">
+        <section class="apresentacao-faleconosco">
 
                 <!--Coluna Esquerda-Imagem solo em Destaque-->
                 <div class="apresentacao-textos-img-destaque">
@@ -57,56 +57,87 @@
                 <h2>ENVIE SUA MENSAGEM</h2>
                 <h3>FORMULÁRIO DE CONTATO</h3> 
                 <p>Preencha os campos abaixo e nos conte o que você precisa.</p>
-                <input type="text"> <!--Nome completo-->
 
-                <input type="email"> <!--Email-->
+                <div class="input-box"> <!--Nome Completo-->
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" placeholder="Nome completo">
+                </div>
+                
+                <div class="input-box"> <!--Email-->
+                    <i class="fa-regular fa-envelope"></i></a>
+                    <input type="email" placeholder="Email">
+                </div>
 
-                <input type="tel"> <!--Telefone-->
+                <div class="input-box"> <!--Telefone-->
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="Telefone (opcional)">
+                </div>
 
-                <label for="assunto">Assunto</label> <!--Assunto-->
-                <select name="assunto" id="assunto">
-                    <option value="">Selecione...</option>
-                    <option value="produtos">Dúvidas sobre produtos</option>
-                    <option value="pedido">Problemas com pedido</option>
-                    <option value="troca">Troca ou devolução</option>
-                    <option value="sugestoes">Sugestões</option>
-                    <option value="outros">Outros</option>
-                </select>
+                <div class="div-assunto">
+                  <i class="fa-solid fa-bars-staggered"></i>  
+                    <select name="assunto" id="assunto">
+                        <option value="" disabled selected>Assunto</option>
+                        <option value="produtos">Dúvidas sobre produtos</option>
+                        <option value="pedido">Problemas com pedido</option>
+                        <option value="troca">Troca ou devolução</option>
+                        <option value="sugestoes">Sugestões</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
 
-                <label for="mensagem">Sua mensagem</label> <!--Mensagem-->
-                <textarea name="mensagem" id="mensagem" rows="5" placeholder="Digite sua mensagem..."></textarea>
+                <div class="div-mensagem">
+                    <i class="fa-regular fa-comment"></i>
+                    <label for="mensagem"></label> <!--Mensagem-->
+                    <textarea name="mensagem" id="mensagem" rows="4" placeholder="Digite sua mensagem..."></textarea>
+                </div>
 
-                <button>ENVIAR MENSAGEM</button>
+                <button class="botao-formulario">ENVIAR MENSAGEM
+                    <i class="fa-solid fa-arrow-right-long"></i>  
+                </button>
             </div>
 
-            <div class="canais">
+            <div class="canais"> <!--SEGUNDA PARTE-NOSSOS CANAIS-->
 
-                <div class="div-canais">
-                    <a href=""><i class="fa-brands fa-whatsapp"></i></a> <!--Whattsapp-->
-                    <h2>WHATSAPP</h2>
-                    <h3>(16) 99189-3182</h3>
-                    <p>Segunda a Sexta - 09h às 18h</p>
+                <h2 class="nossos-canais">NOSSOS CANAIS</h2>
+                
+                <div class="div-canais"> <!--Whattsapp-->
+                    <a href="https://wa.me/5516991893182" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 
+                    <div class="textos">
+                        <span class="titulo">WHATSAPP</span>
+                        <span class="detalhes">(16) 99189-3182</span>
+                        <span class="horario">Segunda a Sexta - 09h às 18h</span>
+                    </div>
                 </div>
 
                 <div class="div-canais"> <!--Instagram-->
-                    <a href="https://www.instagram.com/atlas.club.store/"><i class="fa-brands fa-instagram"></i></a> 
-                    <h2>INSTAGRAM</h2>
-                    <h3>@atlas.club.store</h3>
-                    <p>Mande uma DM, responderemos em breve.</p>
+                    <a class="whattsapp" href="https://www.instagram.com/atlas.club.store/" target="_blank"><i class="fa-brands fa-instagram"></i></a> 
+                    <div class="textos">
+                        <span class="titulo">INSTAGRAM</span>
+                        <span class="detalhes">@atlas.club.store</span>
+                        <span class="horario">Mande uma DM, responderemos em breve.</span>
+                    </div>
                 </div>
 
-                <div class="div-canais">
-                    <a href=""><i class="fa-regular fa-envelope"></i></a> <!--Email-->
-                    <h2>EMAIL</h2>
-                    <h3>atlas.club.contato@gmail.com</h3>
-                    <p>Respondemos em até 24h</p>
+                <div class="div-canais"> <!--Email-->
+                    <a href="mailto:atlasclubcontato01@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                    <div class="textos">
+                        <span class="titulo">EMAIL</span>
+                        <span class="detalhes">atlasclubcontato01@gmail.com</span>
+                        <span class="horario">Respondemos em até 24h</span>
+                    </div>
                 </div>
 
-                <div class="div-canais">
-                     <a href=""><i class="fa-solid fa-location-dot"></i></a> <!--Endereço-->
-                    <h2>ENDEREÇO</h2>
-                    <h3>Ribeirão Preto - SP</h3>
-                    <p>(Atendimento apenas online)</p>
+                <div class="div-canais"> <!--Endereço-->
+                     <a href="https://www.google.com/maps?q=Ribeirão+Preto,+SP" target="_blank"><i class="fa-solid fa-location-dot"></i></a> 
+                     <div class="textos">
+                        <span class="titulo">ENDEREÇO</span>
+                        <span class="detalhes">Ribeirão Preto - SP</span>
+                        <span class="horario">(Atendimento apenas online)</span>
+                    </div>
+                </div>
+
+                <div class="img-ouvidoria">
+                    <img src="img-footer-faleconosco-ouvidoria.png" alt="Imagem Atlas ouvidoria">
                 </div>
                 
             </div>

@@ -8,6 +8,10 @@
     background-color: transparent;
 }
 
+body {
+    background-color: black;
+}
+
 header nav {
     display: flex; /*Flexbox ativo*/
     justify-content: center; /*Espaço entre itens*/
@@ -63,6 +67,12 @@ main {
 }
 
 /*Imagem solo em Destaque-parte inicial*/
+
+.apresentacao-faleconosco {
+     border-bottom: 1px solid; 
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
 .apresentacao-textos-img-destaque {
     background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
               url("../../footer/img-background-contato.png");
@@ -75,7 +85,6 @@ main {
     color: white;
     padding: 50px 40px;
     margin-top: 15px;
-    border-bottom: 1px solid grey;
 }
 
 .apresentacao-textos-img-destaque h1 {
@@ -96,24 +105,35 @@ main {
     margin-top: 20px;
 }
 
-/*BLOCO CENTRAL-FORMULÁRIO E CONTATO*/
+/*BLOCO CENTRAL - FORMULÁRIO E CONTATO*/
 .bloco-central {
-    background-color: lightblue;
+    background-color: black;
     display: flex;
     width: 100%;
+    border-right: 1px solid; 
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
 }
 
 .formulario {
-    display: block;
-    background-color: #d62976;
-    width: 60%;
-    border-right: 2px solid grey;
-    padding: 50px 40px;
+    width: 65%;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: lightgray !important;
+    border-right: 1px solid; 
+    border-image: linear-gradient(to top, #000000, #444444, #888888, #444444, #000000) 1;
 }
 
 .formulario h2 {
     color: orangered;
-    font-size: 12px;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 25px;
 }
 
 .formulario h3 {
@@ -122,19 +142,200 @@ main {
 }
 
 .formulario p {
-    color: grey;
+    color: lightgray;
     font-size: 12px;
 }
 
-.canais {
-    background-color: #4f5bd5;
-    width: 40%;
-    padding: 10px;
+.input-box {
+    display: flex;
+    align-items: center;
+    color: lightgray;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
 }
 
+.input-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
 
+.input-box input::placeholder {
+    color: lightgray;
+}
 
+.div-assunto {
+    display: flex;
+    align-items: center;
+    color: lightgray;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+}
 
+.div-assunto select {
+    border: none;
+    color: lightgray;
+    outline: none;
+    flex: 1;
+}
+
+.div-mensagem {
+    display: flex;
+    align-items: start;
+    color: lightgray;
+    padding: 8px;
+    gap: 5px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+}
+
+.div-mensagem textarea {
+    border: none;
+    color: lightgray;
+    outline: none;
+    flex: 1;
+}
+
+.div-mensagem textarea::placeholder {
+    color: lightgray;
+}
+
+.botao-formulario {
+    display: inline-block;
+    color: black;
+    width: 80%;
+    background-color: orangered !important;
+    border: 1px solid orangered;
+    padding: 15px;
+    transition: all 0.1s ease;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 12px
+}
+
+.botao-formulario i{
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent !important;
+}
+
+.botao-formulario:hover {
+    transition: all ease 0.25s;
+    background-color: rgb(255, 60, 0);
+    color: white !important;
+    cursor: pointer;
+}
+
+/*BLOCO CENTRAL - NOSSOS CANAIS*/
+
+.canais {
+    width: 35%;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.nossos-canais {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.div-canais {
+    margin-right: 25px;
+    margin-left: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
+.div-canais i {
+    color: white;
+    font-size: 30px;
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.textos .titulo {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+}
+
+.textos .detalhes {
+    font-size: 12px;
+    color: lightgrey;
+    padding-bottom: 2px;
+}
+
+.textos .horario {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.fa-whatsapp:hover {
+  color: #25D366;   /* verde oficial do WhatsApp */
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.fa-instagram:hover {
+  background: linear-gradient(45deg, 
+    #feda75, 
+    #fa7e1e, 
+    #d62976, 
+    #962fbf, 
+    #4f5bd5);
+  background-clip: text; /* versão padrão */
+  -webkit-background-clip: text; /* compatibilidade */
+  color: transparent; /* versão padrão */
+  -webkit-text-fill-color: transparent; /* compatibilidade */
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.fa-envelope:hover {
+  color: darkorange;
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.fa-location-dot:hover {
+  color: #FF0000;   /* vermelho para endereço */
+  cursor: pointer;
+  transition: all ease 0.25s;
+}
+
+.img-ouvidoria {
+    display: flex;
+    width: 10px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
 
 /*RODAPÉ*/
 
@@ -144,7 +345,8 @@ main {
     }
 
     .rodape {
-        border-top: 1px solid grey;
+        border-top: 1px solid; 
+        border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
         background-color: black;
         display: flex;
         max-width: 100%;
