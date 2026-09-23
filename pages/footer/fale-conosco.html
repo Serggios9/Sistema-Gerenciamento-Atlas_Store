@@ -70,13 +70,14 @@
 
                 <div class="input-box"> <!--Telefone-->
                     <i class="fa-solid fa-phone"></i>
-                    <input type="tel" placeholder="Telefone (opcional)">
+                    <input type="tel" placeholder="Telefone (opcional)" 
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                 </div>
 
                 <div class="div-assunto">
                   <i class="fa-solid fa-bars-staggered"></i>  
                     <select name="assunto" id="assunto">
-                        <option value="" disabled selected>Assunto</option>
+                        <option value="" disabled selected hidden>Assunto</option>
                         <option value="produtos">Dúvidas sobre produtos</option>
                         <option value="pedido">Problemas com pedido</option>
                         <option value="troca">Troca ou devolução</option>
@@ -94,6 +95,12 @@
                 <button class="botao-formulario">ENVIAR MENSAGEM
                     <i class="fa-solid fa-arrow-right-long"></i>  
                 </button>
+
+                <div class="linha-seguranca">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Seus dados estão seguros. Não compartilhamos suas informações.</span>
+                </div>
+
             </div>
 
             <div class="canais"> <!--SEGUNDA PARTE-NOSSOS CANAIS-->

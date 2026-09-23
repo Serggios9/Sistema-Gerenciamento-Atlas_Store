@@ -158,9 +158,11 @@ main {
 }
 
 .input-box input {
-    border: none;
-    outline: none;
-    flex: 1;
+  border: none;
+  outline: none;
+  flex: 1;
+  color: lightgray;      /* texto digitado */
+  caret-color: orangered; /* cor do cursor */
 }
 
 .input-box input::placeholder {
@@ -179,10 +181,21 @@ main {
 }
 
 .div-assunto select {
-    border: none;
-    color: lightgray;
-    outline: none;
-    flex: 1;
+  border: none;
+  outline: none;
+  flex: 1;
+  background-color: transparent;
+  color: #fff; /* cor da opção selecionada */
+}
+
+/* Placeholder */
+.div-assunto select option[disabled] {
+  color: #aaa; /* cinza claro só para o "Assunto" */
+}
+
+/* Todas as opções no dropdown */
+.div-assunto select option {
+  color: grey; /* preto para aparecer bem no fundo claro do menu */
 }
 
 .div-mensagem {
@@ -197,10 +210,11 @@ main {
 }
 
 .div-mensagem textarea {
-    border: none;
-    color: lightgray;
-    outline: none;
-    flex: 1;
+  border: none;
+  outline: none;
+  flex: 1;
+  color: lightgray;      /* texto digitado */
+  caret-color: orangered;
 }
 
 .div-mensagem textarea::placeholder {
@@ -236,6 +250,23 @@ main {
     color: white !important;
     cursor: pointer;
 }
+
+.linha-seguranca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-top: 1px solid #444; /* linha sutil */
+  padding: 10px 0;
+  color: lightgray;
+  font-size: 12px;
+}
+
+.linha-seguranca i {
+  color: orangered; /* cor do ícone */
+  font-size: 14px;
+}
+
 
 /*BLOCO CENTRAL - NOSSOS CANAIS*/
 
