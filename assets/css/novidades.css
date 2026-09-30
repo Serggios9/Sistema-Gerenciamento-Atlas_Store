@@ -43,7 +43,7 @@ main {
               url("../images/novidades/img-background-novidades.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 80% center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -52,17 +52,21 @@ main {
     margin-top: 15px;
 }
 
-.apresentacao-textos-img-destaque h2 {
-  font-size: 48px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  margin-bottom: 5px;
+.texto-novidades {
+    font-size: 50px;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
 }
 
-.apresentacao-textos-img-destaque h3 {
+.texto-pecasexclusivas {
     color: orangered;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.15;
     letter-spacing: 1px;
-    font-size: 10px;
+    margin-bottom: 10px;
 }
 
 .apresentacao-imagens-novidades img {
@@ -73,25 +77,22 @@ main {
 
 .btn-ver-novidades {
     display: inline-block;
-    margin-top: 22px;
-    padding: 14px 24px;
-
-    border: 1px solid grey;
-    background: transparent;
+    margin-top: 15px;
+    padding: 14px 22px;
+    border: 1px solid orangered;
+    border-radius: 4px;
     color: white;
-
+    background-color: transparent;
+    text-decoration: none;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 2px;
-    text-decoration: none;
-
+    letter-spacing: 1px;
     transition: 0.3s ease;
 }
 
 .btn-ver-novidades:hover {
-    background-color: transparent;
+     background-color: orangered;
     color: white;
-    border-color: orangered;
 }
 
 /*CARDS*/
@@ -325,16 +326,21 @@ main {
     padding-bottom: 30px;
 }
 
-.segunda-central-novidades-textos h2 {
-    font-size: 12px;
+.texto-nova-colecao {
     color: orangered;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-.segunda-central-novidades-textos h3 {
-    font-size: 60px;
-    margin-bottom: 10px;
-    color: white;
+.texto-streetwear {
+    font-size: 50px;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
 }
 
 .segunda-central-novidades-textos p {
