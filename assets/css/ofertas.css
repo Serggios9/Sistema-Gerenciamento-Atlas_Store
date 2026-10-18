@@ -1,0 +1,733 @@
+/*Estilos locais do Atlas Store-Ofertas */
+
+*{
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: black;
+}
+
+.page-ofertas {
+    color: white !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid orangered;
+}
+
+.page-ofertas:hover {
+    border-color: white !important;
+    transition: ease all 0.25s;
+}
+
+
+/*APRESENTAÇÃO INICIAL*/
+
+.apresentacao-ofertas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45vh;
+    width: 100%;
+    background-color: black;
+}
+
+.apresentacao-textos-img-destaque {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
+              url("../images/ofertas/usar-modelo-ofertas.jpg"); 
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+}
+
+.texto-ofertas {
+    font-size: 50px;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+}
+
+.texto-ofertas span {
+    color: orangered;
+}
+
+.texto-cultura {
+    color: orangered;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+/*FAIXA ANIMADA DE OFERTAS*/
+
+.faixa-ofertas {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: orangered;
+    padding: 9px 0;
+}
+
+.faixa-ofertas-trilho {
+    display: inline-block;
+    animation: faixa-rolando 25s linear infinite;
+}
+
+.faixa-ofertas-trilho span {
+    color: white;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0 25px;
+}
+
+.faixa-ofertas:hover .faixa-ofertas-trilho {
+    animation-play-state: paused;
+}
+
+@keyframes faixa-rolando {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+/*TÍTULO DAS SEÇÕES DE CARDS*/
+
+#produtos-ofertas {
+    scroll-margin-top: 80px;
+}
+
+.titulo-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 0;
+    margin-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: transparent;
+}
+
+.titulo-cards h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.titulo-cards p {
+    color: #666;
+    font-size: 9px;
+    margin: 0;
+}
+
+
+/*CARDS*/
+
+.produto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #1a1a1a;
+    min-height: 250px; /*mantém o card visível enquanto não há imagem*/
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.produto img:hover {
+    transform: scale(1.05);
+}
+
+.info-produto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.3) 70%, transparent 100%);
+    color: #fff;
+    text-align: left;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.produto:hover .info-produto {
+    opacity: 1;
+}
+
+.produto h3 {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ccc;
+    margin-bottom: 4px;
+}
+
+.produto p {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/*Preços: antigo riscado + novo em destaque*/
+.preco-antigo {
+    color: gray;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.preco-novo {
+    color: orangered;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/*SELO DE DESCONTO*/
+.selo-desconto {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 4;
+    background-color: orangered;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 9px;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/*Selo secundário (ex: ÚLTIMAS UNIDADES, ESGOTANDO)*/
+.selo-aviso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid orangered;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 7px;
+    border-radius: 3px;
+}
+
+.secao-label-tamanho {
+    text-align: center !important;
+    font-size: 7px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px !important;
+    color: gray !important;
+}
+
+.tamanhos {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+
+.tamanho {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid transparent !important;
+    color: #999;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 4px 2px;
+    transition: 0.25s all ease;
+}
+
+.tamanho:hover {
+    color: white !important;
+}
+
+.tamanho.selecionado { /*Ativar Via JS depois-Botão selecionado*/
+    border-bottom-color: orangered !important;
+    color: white;
+}
+
+.area-botao {
+    border-top: none;
+    margin-top: 0;
+    background-color: transparent !important;
+}
+
+.produto button {
+    width: 100%;
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 0.8px;
+    background-color: transparent;
+    border: 1px solid orangered;
+    color: orangered;
+    padding: 4px;
+    border-radius: 2px;
+    transition: 0.25s all ease;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* ---------- SETAS DE NAVEGAÇÃO (visual, ativar via JS depois) ---------- */
+
+.produto .seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    font-size: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.25s all ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produto:hover .seta {
+    opacity: 0.7;
+}
+
+.produto .seta:hover {
+    background: rgba(255, 68, 0, 0.537);
+    color: white;
+    border: none;
+    opacity: 1;
+}
+
+.produto .seta-esquerda {
+    left: 8px;
+}
+
+.produto .seta-direita {
+    right: 8px;
+}
+
+
+/*GRID DE CARDS (5 por linha, igual à página Esportes)*/
+
+.central-ofertas {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 25px;
+    border-radius: 15px;
+    align-items: center;
+    height: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.central-ofertas img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*FAIXAS DE DESCONTO (substitui o "Escolha seu esporte")*/
+
+#faixas-desconto {
+    padding: 20px 1%;
+    background-color: black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.titulo-faixas-desconto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.titulo-faixas-desconto h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.titulo-faixas-desconto p {
+    color: #666;
+    font-size: 9px;
+    margin: 0;
+}
+
+.cards-faixas-desconto {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.card-faixa {
+    width: 25%;
+    height: 150px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.card-faixa:hover {
+    transform: scale(1.01);
+}
+
+.card-faixa.faixa-30 {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.15)),
+        url("../images/ofertas/background-card-30-ofertas.png");
+    background-color: #1c1c1c;
+}
+
+.card-faixa.faixa-40 {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.15)),
+        url("../images/ofertas/background-card-40-ofertas.png"); 
+    background-color: #2a1a14;
+}
+
+.card-faixa.faixa-50 {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.15)),
+        url("../images/ofertas/background-card-50-ofertas.png"); 
+    background-color: #3a1d10;
+}
+
+.card-faixa.faixa-60 {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.15)),
+        url("../images/ofertas/background-card-60-ofertas.png");
+    background-color: #5a210c;
+}
+
+.conteudo-faixa {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+}
+
+.conteudo-faixa span {
+    display: block;
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.conteudo-faixa h3 {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 0 8px 0;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.conteudo-faixa a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #777;
+    border-radius: 3px;
+    padding: 7px 10px;
+    transition: 0.3s;
+}
+
+.conteudo-faixa a:hover {
+    background-color: orangered;
+    color: lightgray;
+    border-color: orangered;
+}
+
+
+/*SEGUNDA APRESENTAÇÃO-OFERTA RELÂMPAGO*/
+
+.apresentacao-relampago {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45vh;
+    width: 100%;
+    background-color: black;
+}
+
+.apresentacao-relampago h2,
+.apresentacao-relampago h3 {
+    text-transform: uppercase;
+    text-align: end;
+}
+
+.relampago-textos-img-destaque {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
+              url("../images/ofertas/background-streetwear-ofertas.png");
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/*Contador (visual, ativar via JS depois)*/
+.contador {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.contador-bloco {
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 2px;
+    padding: 8px 14px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.contador-bloco strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+    background-color: transparent;
+}
+
+.contador-bloco small {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: grey;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+.contador-separador {
+    color: orangered;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+/*CENTRAL FINAL-CHAMADA*/
+
+.central-chamada {
+    display: flex;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)), /*degradê 1*/
+                linear-gradient(to right, black, rgba(0, 0, 0, 0)), /*degradê 2*/
+                url("../images/ofertas/background-final-ofertas.png");
+    background-color: #111;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: white;
+    height: 50vh;
+}
+
+.central-chamada-textos {
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.texto-chamada {
+    font-size: 50px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+}
+
+.texto-chamada span {
+    color: orangered;
+}
+
+.central-chamada-textos p {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+/*botão*/
+.btn-explorar {
+    color: white;
+    border: 2px solid rgba(169, 169, 169, 0.406);
+    border-radius: 2px;
+    text-decoration: none;
+    padding: 15px;
+    padding-right: 25px;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.btn-explorar:hover {
+    border-color: orangered;
+    transition: all 0.25s ease; /*Animação suave*/
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .cards-faixas-desconto {
+        flex-wrap: wrap;
+    }
+
+    .card-faixa {
+        width: calc(50% - 10px);
+    }
+
+}
+
+/*RODAPÉ*/
+
+.logo-rodape {
+    margin-right: 30px;
+}
+
+.rodape {
+    border-top: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+    background-color: black;
+    display: flex;
+    margin-top: 0;
+    max-width: 100%;
+    height: 20vh;
+    color: white;
+    justify-content: space-between;
+    padding-right: 25px;
+    padding-left: 25px;
+    align-items: center;
+}
+
+.rodape-titulo {
+    text-transform: uppercase;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.rodape-ativo {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid orangered;
+    display: inline-block !important;
+    font-size: smaller;
+    padding-top: 3px;
+}
+
+.rodape-ativo:hover {
+    border-bottom: 1px solid white;
+    transition: ease all 0.25s;
+}
+
+.rodape-links {
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    font-size: smaller;
+    padding-top: 3px;
+}
+
+.rodape-links:hover {
+    color: white;
+    transition: ease all 0.25s;
+}
+
+.rodape-insta, .rodape-tiktok, .rodape-youtube {
+    color: grey;
+    text-decoration: none;
+    font-size: large;
+    margin-right: 15px;
+}
+
+.rodape-insta i:hover {
+    background: linear-gradient(45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5);
+    background-clip: text; /* versão padrão */
+    -webkit-background-clip: text; /* compatibilidade */
+    color: transparent; /* versão padrão */
+    -webkit-text-fill-color: transparent; /* compatibilidade */
+    transition: all ease 0.25s;
+}
+
+.rodape-insta:hover {
+    transition: all ease 0.25s;
+}
+
+.rodape-tiktok:hover {
+    color: white;
+    transition: all ease 0.25s;
+}
+
+.rodape-youtube:hover {
+    color: red;
+    transition: all ease 0.25s;
+}

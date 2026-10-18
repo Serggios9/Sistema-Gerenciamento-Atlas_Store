@@ -59,6 +59,10 @@ main {
     margin: 0 0 15px 0;
 }
 
+.texto-esportes span {
+    color: orangered;
+}
+
 .texto-cultura {
     color: orangered;
     font-size: 11px;
