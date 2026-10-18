@@ -601,11 +601,11 @@ main {
 .card-explorar {
     position: relative;
     overflow: hidden;
-    min-height: 170px;
+    min-height: 220px;
     padding: 24px;
     border: 1px solid #222;
     border-radius: 8px;
-    background: linear-gradient(to bottom right, #111, #050505);
+    background-color: #0d0d0d; /*cor de reserva enquanto não há imagem*/
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -613,17 +613,55 @@ main {
     transition: 0.3s ease;
 }
 
+/*Camada do background (separada para dar zoom no hover)*/
+.card-explorar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+.card-explorar > * {
+    z-index: 1; /*mantém textos acima do background*/
+}
+
 .card-explorar:hover {
     border-color: orangered;
     transform: translateY(-4px);
 }
 
+.card-explorar:hover::before {
+    transform: scale(1.06);
+}
+
+.card-esportes::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)),
+        url("../images/novidades/../esportes/background_esportes.png");
+}
+
+.card-colecoes::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)),
+        url("../images/novidades/background-colecoes.png");
+}
+
+.card-ofertas::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25)),
+        url("../images/novidades/../ofertas/usar-modelo-ofertas.jpg");
+}
+
+/*TEXTOS*/
 .card-explorar-numero {
     position: absolute;
     top: 8px;
     right: 18px;
     color: transparent;
-    -webkit-text-stroke: 1px #333;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
     font-size: 64px;
     font-weight: 800;
     line-height: 1;
@@ -642,13 +680,13 @@ main {
 }
 
 .card-explorar p {
-    color: #888;
+    color: #bbb;
     font-size: 12px;
     line-height: 1.4;
     margin: 0 0 14px 0;
 }
 
-.card-explorar span {
+.card-explorar-link {
     color: orangered;
     font-size: 10px;
     font-weight: 700;
