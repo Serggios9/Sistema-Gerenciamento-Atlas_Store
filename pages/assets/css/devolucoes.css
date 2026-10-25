@@ -1,0 +1,564 @@
+/*Estilos Locais do Atlas Store-Trocas e Devoluções*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+header nav {
+    display: flex; /*Flexbox ativo*/
+    justify-content: center; /*Espaço entre itens*/
+    align-items: center; /*Alinha verticalmente*/
+    gap: 20px; /*Espaço entre os blocos*/
+    padding: 10px 20px; /*Espaço interno do header*/
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/*LOGO*/
+
+.logo {
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;              /* remove margens padrão */
+    line-height: 60px;      /* igual à altura do nav */
+    display: flex;          /* garante alinhamento interno */
+    align-items: center;    /* centraliza verticalmente o texto */
+    text-decoration: none;
+    gap: 2px;
+    padding-left: 20px;
+}
+
+.logo-atlas {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.logo-ponto {
+    color: orangered;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.logo-store {
+    color: grey;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+main {
+    border-top: 2px solid grey;
+}
+
+
+/*Imagem solo em Destaque-parte inicial*/
+
+.apresentacao-devolucoes {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.apresentacao-textos-img-destaque {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
+              url("../../footer/img-background-devolucoes.png"); /*ADICIONAR IMAGEM*/
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+}
+
+.apresentacao-textos-img-destaque h1 {
+    margin-top: 45px;
+    color: orangered;
+    font-size: 12px;
+}
+
+.apresentacao-textos-img-destaque h2 {
+    margin-top: 10px;
+    color: white;
+    font-size: 60px;
+}
+
+.apresentacao-textos-img-destaque h3 {
+    color: grey;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+/*BLOCO CENTRAL - POLÍTICA E RESUMO*/
+
+.bloco-central {
+    background-color: black;
+    display: flex;
+    align-items: flex-start; /*permite o resumo ficar fixo ao rolar*/
+    width: 100%;
+    border-right: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.politica {
+    width: 65%;
+    gap: 20px;
+    padding: 20px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: lightgray;
+    border-right: 1px solid;
+    border-image: linear-gradient(to top, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.rotulo-secao {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.politica h3 {
+    color: white;
+    font-size: 20px;
+}
+
+.politica-intro {
+    color: lightgray;
+    font-size: 12px;
+}
+
+
+/*PASSO A PASSO*/
+
+.passos {
+    display: flex;
+    flex-direction: column;
+}
+
+.passo {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 18px 0;
+    border-bottom: 1px solid #222;
+}
+
+.passo:first-child {
+    border-top: 1px solid #222;
+}
+
+.numero-passo {
+    min-width: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: all ease 0.25s;
+}
+
+.passo:hover .numero-passo {
+    color: orangered;
+}
+
+.passo-texto h4 {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.passo-texto p {
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/*CONDIÇÕES*/
+
+.condicoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.condicao {
+    padding: 18px 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.condicao h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.condicao.aceita {
+    border-top: 2px solid orangered;
+}
+
+.condicao.aceita h4 i {
+    color: orangered;
+}
+
+.condicao.recusada {
+    border-top: 2px solid #555;
+}
+
+.condicao.recusada h4 i {
+    color: #777;
+}
+
+.condicao ul {
+    list-style: none;
+}
+
+.condicao li {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.condicao.aceita li::before {
+    content: "✓";
+    color: orangered;
+    font-weight: 700;
+}
+
+.condicao.recusada li::before {
+    content: "✕";
+    color: #777;
+    font-weight: 700;
+}
+
+
+/*DÚVIDAS FREQUENTES (abre e fecha sem JS)*/
+
+.duvidas {
+    display: flex;
+    flex-direction: column;
+}
+
+.duvida {
+    border-bottom: 1px solid #222;
+}
+
+.duvida:first-child {
+    border-top: 1px solid #222;
+}
+
+.duvida summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    list-style: none;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all ease 0.25s;
+}
+
+.duvida summary::-webkit-details-marker {
+    display: none;
+}
+
+.duvida summary::after {
+    content: "+";
+    color: orangered;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.duvida[open] summary::after {
+    content: "−";
+}
+
+.duvida summary:hover {
+    color: orangered;
+}
+
+.duvida p {
+    padding-bottom: 16px;
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/*BLOCO CENTRAL - RESUMO RÁPIDO*/
+
+.resumo {
+    width: 35%;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: sticky;
+    top: 75px;
+}
+
+.rotulo-resumo {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.div-prazos {
+    margin-right: 25px;
+    margin-left: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
+.div-prazos i {
+    min-width: 32px;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    transition: all ease 0.25s;
+}
+
+.div-prazos:hover i {
+    color: orangered;
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.textos .titulo {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+}
+
+.textos .detalhes {
+    font-size: 12px;
+    color: lightgrey;
+    padding-bottom: 2px;
+}
+
+.textos .horario {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+
+/*CAIXA DE AJUDA*/
+
+.ajuda-box {
+    margin: 10px 25px 0 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #333;
+    border-left: 3px solid orangered;
+    border-radius: 4px;
+}
+
+.ajuda-box .rotulo-ajuda {
+    color: orangered;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ajuda-box h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.ajuda-box .detalhe-ajuda {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.botao-ajuda {
+    display: block;
+    margin-top: 5px;
+    padding: 15px;
+    text-align: center;
+    color: black;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: all 0.1s ease;
+}
+
+.botao-ajuda:hover {
+    transition: all ease 0.25s;
+    background-color: rgb(255, 60, 0);
+    color: white;
+}
+
+.img-devolucoes {
+    margin: 0 25px 0 10px;
+}
+
+.img-devolucoes img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .bloco-central {
+        flex-direction: column;
+    }
+
+    .politica,
+    .resumo {
+        width: 100%;
+        position: static;
+    }
+
+    .condicoes {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/*RODAPÉ*/
+
+
+    .logo-rodape {
+        margin-right: 30px;
+    }
+
+    .rodape {
+        border-top: 1px solid;
+        border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+        background-color: black;
+        display: flex;
+        max-width: 100%;
+        height: 20vh;
+        color: white;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .rodape-titulo {
+        text-transform: uppercase;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .rodape-ativo {
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid orangered;
+        display: inline-block !important;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-ativo:hover {
+        border-bottom: 1px solid white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-links {
+        text-decoration: none;
+        color: grey;
+        display: flex;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-links:hover {
+        color: white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-insta, .rodape-tiktok, .rodape-youtube {
+        color: grey;
+        text-decoration: none;
+        font-size: large;
+        margin-right: 15px;
+    }
+
+    .rodape-insta i:hover {
+        background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+        background-clip: text; /* versão padrão */
+        -webkit-background-clip: text; /* compatibilidade */
+        color: transparent; /* versão padrão */
+        -webkit-text-fill-color: transparent; /* compatibilidade */
+        transition: all ease 0.25s;
+    }
+
+    .rodape-insta:hover {
+        transition: all ease 0.25s;
+    }
+
+    .rodape-tiktok:hover {
+        color: white;
+        transition: all ease 0.25s;
+    }
+
+    .rodape-youtube:hover {
+        color: red;
+        transition: all ease 0.25s;
+    }

@@ -1,0 +1,801 @@
+/*Estilos locais do Atlas Store-Coleções */
+
+*{
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-color: black;
+    display: flow-root; /*impede que a margem da última seção vaze para fora do main e mostre o fundo branco*/
+}
+
+.page-colecoes {
+    color: white !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid orangered;
+}
+
+.page-colecoes:hover {
+    border-color: white !important;
+    transition: ease all 0.25s;
+}
+
+
+/*APRESENTAÇÃO INICIAL*/
+
+.apresentacao-colecoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    background-color: black;
+}
+
+.apresentacao-colecoes h3 {
+    text-transform: uppercase;
+}
+
+/*Imagem solo em Destaque-parte inicial*/
+.apresentacao-textos-img-destaque {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 45%), /*degradê superior*/
+                linear-gradient(to top, black, rgba(0, 0, 0, 0) 20%), /*degradê inferior*/
+                url("../images/colecoes/background-colecoes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+}
+
+.texto-colecoes {
+    font-size: 50px;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+}
+
+.texto-temas {
+    color: orangered;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+
+/*CABEÇALHO DAS SEÇÕES*/
+
+#colecoes {
+    scroll-margin-top: 80px;
+}
+
+.cabecalho-secao {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cabecalho-secao-texto {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.numero-secao {
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.cabecalho-secao h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.cabecalho-secao p {
+    color: #777;
+    font-size: 11px;
+    line-height: 1.4;
+    max-width: 520px;
+    margin: 0;
+}
+
+
+/*GRADE DE COLEÇÕES (mosaico)*/
+
+.grade-colecoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 230px;
+    gap: 20px;
+    margin: 25px 20px 30px 20px;
+}
+
+.card-colecao {
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s ease;
+}
+
+/*Camada do background (separada para dar zoom no hover)*/
+.card-colecao::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+.card-colecao > * {
+    position: relative;
+    z-index: 1; /*mantém textos acima do background*/
+}
+
+.card-colecao:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.card-colecao:hover::before {
+    transform: scale(1.06);
+}
+
+/*Tamanhos do mosaico*/
+.card-colecao.futebol {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-colecao.motorsport,
+.card-colecao.streetwear {
+    grid-column: span 2;
+}
+
+/*BACKGROUNDS (um por card)*/
+.card-colecao.futebol::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-futebol.png");
+}
+
+.card-colecao.basquete::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-basquete.png");
+}
+
+.card-colecao.nfl::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-nfl.png");
+}
+
+.card-colecao.motorsport::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-motorsport.png");
+}
+
+.card-colecao.streetwear::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-streetwear.png");
+}
+
+.card-colecao.fe::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-fe.png");
+}
+
+.card-colecao.academia::before {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+        url("../images/colecoes/background-academia.png");
+}
+
+/*TEXTOS DOS CARDS*/
+.card-colecao-numero {
+    position: absolute !important;
+    top: 8px;
+    right: 18px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1;
+    transition: 0.3s ease;
+}
+
+.card-colecao:hover .card-colecao-numero {
+    -webkit-text-stroke-color: orangered;
+}
+
+.card-colecao h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 6px 0;
+}
+
+.card-colecao.futebol h3 {
+    font-size: 42px;
+}
+
+.card-colecao p {
+    color: #bbb;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 320px;
+    margin: 0 0 14px 0;
+}
+
+.card-colecao-link {
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/*ATALHOS POR SUBCATEGORIA (filtro + mini cards)*/
+
+.atalhos-colecoes {
+    margin: 25px 20px 40px 20px;
+}
+
+/*Filtros feitos com radio + label (sem JS)*/
+.atalhos-filtros {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.atalhos-filtros input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.atalhos-filtros label {
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 2px;
+    color: #ccc;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.atalhos-filtros label:hover {
+    border-color: orangered;
+    color: white;
+}
+
+.atalhos-filtros input:checked + label {
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+}
+
+.atalhos-filtros input:focus-visible + label {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/*Esconde os cards das outras coleções quando um filtro é escolhido*/
+.atalhos-colecoes:has(#filtro-futebol:checked) .mini-card:not(.futebol),
+.atalhos-colecoes:has(#filtro-basquete:checked) .mini-card:not(.basquete),
+.atalhos-colecoes:has(#filtro-nfl:checked) .mini-card:not(.nfl),
+.atalhos-colecoes:has(#filtro-motorsport:checked) .mini-card:not(.motorsport),
+.atalhos-colecoes:has(#filtro-streetwear:checked) .mini-card:not(.streetwear),
+.atalhos-colecoes:has(#filtro-fe:checked) .mini-card:not(.fe),
+.atalhos-colecoes:has(#filtro-academia:checked) .mini-card:not(.academia) {
+    display: none;
+}
+
+/*Grade de mini cards*/
+.atalhos-grade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    gap: 15px;
+}
+
+.mini-card {
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background-color: #0d0d0d; /*cor de reserva enquanto não há imagem*/
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s ease;
+    animation: mini-card-aparecer 0.4s ease backwards;
+}
+
+@keyframes mini-card-aparecer {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*Camada do background (separada para dar zoom no hover)*/
+.mini-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+/*Camada escura por cima da imagem (deixa o texto legível)*/
+.mini-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.88), rgba(0,0,0,0.25));
+}
+
+.mini-card > * {
+    position: relative;
+    z-index: 1; /*mantém textos acima do background*/
+}
+
+.mini-card:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.mini-card:hover::before {
+    transform: scale(1.08);
+}
+
+/*BACKGROUNDS (um por mini card)*/
+.mini-card.fut-antigo::before { /*FUTEBOL ANTIGO*/
+    background-image: url("../images/colecoes/background-minicard-lendasfutebolantigo.jfif");
+}
+
+.mini-card.fut-atual::before { /*FUTEBOL ATUAL*/
+    background-image: url("../images/colecoes/background-minicard-lendasfutebolatual.jfif");
+}
+
+.mini-card.bas-classico::before { /*BASQUETE CLÁSSICO*/
+    background-image: url("../images/colecoes/background-minicards-basqueteantigo.jfif");
+}
+
+.mini-card.bas-atual::before { /*BASQUETE ATUAL*/
+    background-image: url("../images/colecoes/background-minicards-basqueteatual.jfif");
+}
+
+.mini-card.nfl-lendas::before { /*NFL LENDAS*/
+    background-image: url("../images/colecoes/background-minicard-nfllendas.jfif");
+}
+
+.mini-card.nfl-atuais::before { /*NFL ATUAL*/
+    background-image: url("../images/colecoes/background-minicard-nflatual.jfif");
+}
+
+.mini-card.moto-auto::before { /*AUTOMOBILISMO*/
+    background-image: url("../images/colecoes/background-minicard-automobilismo.jfif");
+}
+
+.mini-card.moto-luxo::before { /*CARROS*/
+    background-image: url("../images/colecoes/background-minicard-carros.jfif");
+}
+
+.mini-card.street-essenciais::before { /*ESSENCIAIS*/
+    background-image: url("../images/colecoes/background-minicards-essenciais.jfif");
+}
+
+.mini-card.street-musica::before { /*MÚSICA*/
+    background-image: url("../images/colecoes/background-minicards-musica.jfif");
+}
+
+.mini-card.fe-todas::before { /*NOT OF THIS WORLD*/
+    background-image: url("../images/colecoes/background-minicards-messiah.jfif");
+}
+
+.mini-card.fe-glory::before { /*ALL GLORY TO GOD*/
+    background-image: url("../images/colecoes/background-minicards-iam.jfif");
+}
+
+.mini-card.academia-club::before { /*ATLAS CLUB*/
+    background-image: url("../images/colecoes/background-minicards-atlasclub.jfif");
+}
+
+.mini-card.academia-beast::before { /*BEAST MODE*/
+    background-image: url("../images/colecoes/background-minicards-beastmode.jfif");
+}
+
+/*TEXTOS DOS MINI CARDS*/
+.mini-card-colecao {
+    position: absolute !important;
+    top: 14px;
+    left: 14px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-left: 2px solid orangered;
+    border-radius: 2px;
+    color: #ddd;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 4px 8px;
+    transition: 0.3s ease;
+}
+
+.mini-card:hover .mini-card-colecao {
+    background-color: orangered;
+    color: white;
+}
+
+.mini-card h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.mini-card p {
+    color: #aaa;
+    font-size: 11px;
+    line-height: 1.3;
+    max-width: 80%;
+    margin: 0;
+}
+
+.mini-card-seta {
+    position: absolute !important;
+    right: 14px;
+    bottom: 14px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid orangered;
+    border-radius: 50%;
+    color: orangered;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: 0.3s ease;
+}
+
+.mini-card:hover .mini-card-seta {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: orangered;
+    color: white;
+}
+
+
+/*FINAL COLEÇÕES-NOVIDADES E OFERTAS*/
+
+.final-colecoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 20px 30px 20px;
+}
+
+.card-final {
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+    padding: 30px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s ease;
+}
+
+.card-final::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+}
+
+.card-final > * {
+    position: relative;
+    z-index: 1;
+}
+
+.card-final:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.card-final:hover::before {
+    transform: scale(1.06);
+}
+
+.card-final.novidades::before {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.15)),
+        url("../images/colecoes/background-novidades.png");
+}
+
+.card-final.ofertas::before {
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.15)),
+        url("../images/colecoes/background-ofertas.jpg");
+}
+
+.card-final-etiqueta {
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.card-final h3 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 8px 0;
+}
+
+.card-final p {
+    color: #bbb;
+    font-size: 13px;
+    max-width: 340px;
+    margin: 0 0 16px 0;
+}
+
+.card-final-botao {
+    align-self: flex-start;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px solid rgba(169, 169, 169, 0.406);
+    border-radius: 2px;
+    padding: 12px 20px;
+    transition: 0.25s ease;
+}
+
+.card-final:hover .card-final-botao {
+    border-color: orangered;
+}
+
+
+/*VITRINE-UMA PEÇA DE CADA UNIVERSO*/
+
+.vitrine-grade {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+    margin: 25px 20px 40px 20px;
+}
+
+.vitrine-card {
+    display: block;
+    text-decoration: none;
+}
+
+.vitrine-imagem {
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    border: 1px solid #222;
+    border-radius: 10px;
+    background-color: #1a1a1a; /*cor de reserva enquanto não há imagem*/
+    transition: 0.3s ease;
+}
+
+.vitrine-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.vitrine-card:hover .vitrine-imagem {
+    border-color: orangered;
+}
+
+.vitrine-card:hover .vitrine-imagem img {
+    transform: scale(1.06);
+}
+
+.vitrine-colecao {
+    display: block;
+    color: orangered;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 12px 0 4px 0;
+}
+
+.vitrine-card h3 {
+    color: #ccc;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 8px 0;
+}
+
+.vitrine-link {
+    color: #666;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+}
+
+.vitrine-card:hover .vitrine-link {
+    color: white;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .grade-colecoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-colecao.futebol,
+    .card-colecao.motorsport,
+    .card-colecao.streetwear {
+        grid-column: span 2;
+    }
+
+    .card-colecao.futebol {
+        grid-row: span 1;
+    }
+
+    .atalhos-grade,
+    .vitrine-grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .final-colecoes {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-secao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/*RODAPÉ*/
+
+
+.logo-rodape {
+    margin-right: 30px;
+}
+
+.rodape {
+    border-top: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+    background-color: black;
+    display: flex;
+    margin-top: 0;
+    max-width: 100%;
+    height: 20vh;
+    color: white;
+    justify-content: space-between;
+    padding-right: 25px;
+    padding-left: 25px;
+    align-items: center;
+}
+
+.rodape-titulo {
+    text-transform: uppercase;
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.rodape-ativo {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid orangered;
+    display: inline-block !important;
+    font-size: smaller;
+    padding-top: 3px;
+}
+
+.rodape-ativo:hover {
+    border-bottom: 1px solid white;
+    transition: ease all 0.25s;
+}
+
+.rodape-links {
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    font-size: smaller;
+    padding-top: 3px;
+}
+
+.rodape-links:hover {
+    color: white;
+    transition: ease all 0.25s;
+}
+
+.rodape-insta, .rodape-tiktok, .rodape-youtube {
+    color: grey;
+    text-decoration: none;
+    font-size: large;
+    margin-right: 15px;
+}
+
+.rodape-insta i:hover {
+    background: linear-gradient(45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5);
+    background-clip: text; /* versão padrão */
+    -webkit-background-clip: text; /* compatibilidade */
+    color: transparent; /* versão padrão */
+    -webkit-text-fill-color: transparent; /* compatibilidade */
+    transition: all ease 0.25s;
+}
+
+.rodape-insta:hover {
+    transition: all ease 0.25s;
+}
+
+.rodape-tiktok:hover {
+    color: white;
+    transition: all ease 0.25s;
+}
+
+.rodape-youtube:hover {
+    color: red;
+    transition: all ease 0.25s;
+}

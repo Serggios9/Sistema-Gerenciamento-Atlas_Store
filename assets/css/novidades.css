@@ -254,7 +254,7 @@ main {
     text-transform: uppercase; /*Transforma em caixa alta*/
 }
 
-/*Selo de categoria (explica o tema do card)*/
+/*Selo de categoria*/
 .selo-categoria {
     position: absolute;
     top: 10px;

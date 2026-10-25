@@ -144,7 +144,6 @@ main {
     overflow: hidden;
     border-radius: 12px;
     background-color: #1a1a1a;
-    min-height: 250px; /*mantém o card visível enquanto não há imagem*/
 }
 
 .produto img {
@@ -157,6 +156,23 @@ main {
 
 .produto img:hover {
     transform: scale(1.05);
+}
+
+/*Selo de categoria*/
+.selo-categoria {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-left: 2px solid orangered;
+    color: #ddd;
+    font-size: 7px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 2px;
+    letter-spacing: 1.2px;
+    z-index: 2;
+    text-transform: uppercase;
 }
 
 .info-produto {

@@ -8,6 +8,10 @@
     background-color: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
 }
@@ -66,10 +70,11 @@ main {
     border-top: 2px solid grey;
 }
 
+
 /*Imagem solo em Destaque-parte inicial*/
 
 .apresentacao-faleconosco {
-     border-bottom: 1px solid; 
+    border-bottom: 1px solid;
     border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
 }
 
@@ -79,7 +84,6 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     width: 100%;
     height: 100%;
     color: white;
@@ -87,8 +91,37 @@ main {
     margin-top: 15px;
 }
 
-.apresentacao-textos-img-destaque h1 {
+/*Etiqueta com ponto pulsante*/
+.tag-resposta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 45px;
+    padding: 6px 12px;
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 20px;
+    color: #ccc;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tag-resposta-ponto {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: orangered;
+    animation: pulsar 1.6s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
+    70%  { box-shadow: 0 0 0 8px rgba(255, 69, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
+}
+
+.apresentacao-textos-img-destaque h1 {
+    margin-top: 18px;
     color: orangered;
     font-size: 12px;
 }
@@ -103,29 +136,75 @@ main {
     color: grey;
     font-size: 12px;
     margin-top: 20px;
+    line-height: 1.6;
 }
+
+
+/*COMO FUNCIONA O ATENDIMENTO*/
+
+.etapas-atendimento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 22px 40px;
+    background-color: black;
+    border-bottom: 1px solid #222;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.etapa-numero {
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.etapa i {
+    color: white;
+    font-size: 20px;
+}
+
+.etapa h4 {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+}
+
+.etapa p {
+    color: #777;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
 
 /*BLOCO CENTRAL - FORMULÁRIO E CONTATO*/
 .bloco-central {
     background-color: black;
     display: flex;
+    align-items: flex-start; /*permite os canais ficarem fixos ao rolar*/
     width: 100%;
-    border-right: 1px solid; 
+    border-right: 1px solid;
     border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
 }
 
 .formulario {
     width: 65%;
-    height: 100%;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 40px 30px 40px;
     display: flex;
     flex-direction: column;
     background-color: black;
-    padding-left: 40px;
-    padding-right: 40px;
     color: lightgray !important;
-    border-right: 1px solid; 
+    border-right: 1px solid;
     border-image: linear-gradient(to top, #000000, #444444, #888888, #444444, #000000) 1;
 }
 
@@ -146,7 +225,10 @@ main {
     font-size: 12px;
 }
 
-.input-box {
+/*Campos (mesmo estilo para todos)*/
+.input-box,
+.div-assunto,
+.div-mensagem {
     display: flex;
     align-items: center;
     color: lightgray;
@@ -155,70 +237,108 @@ main {
     margin-bottom: 10px;
     border-radius: 2px;
     border: 1px solid lightgray;
+    transition: all ease 0.25s;
+}
+
+.div-mensagem {
+    align-items: flex-start;
+    gap: 5px;
+}
+
+/*Campo em foco: borda e ícone laranja*/
+.input-box:focus-within,
+.div-assunto:focus-within,
+.div-mensagem:focus-within {
+    border-color: orangered;
+    box-shadow: 0 0 0 1px rgba(255, 69, 0, 0.35);
+}
+
+.input-box:focus-within i,
+.div-assunto:focus-within i,
+.div-mensagem:focus-within i {
+    color: orangered;
 }
 
 .input-box input {
-  border: none;
-  outline: none;
-  flex: 1;
-  color: lightgray;      /* texto digitado */
-  caret-color: orangered; /* cor do cursor */
+    border: none;
+    outline: none;
+    flex: 1;
+    color: lightgray;       /* texto digitado */
+    caret-color: orangered; /* cor do cursor */
 }
 
 .input-box input::placeholder {
     color: lightgray;
 }
 
-.div-assunto {
-    display: flex;
-    align-items: center;
-    color: lightgray;
-    gap: 10px;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid lightgray;
-}
-
 .div-assunto select {
-  border: none;
-  outline: none;
-  flex: 1;
-  background-color: transparent;
-  color: #fff; /* cor da opção selecionada */
+    border: none;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    color: #fff; /* cor da opção selecionada */
+    cursor: pointer;
 }
 
 /* Placeholder */
 .div-assunto select option[disabled] {
-  color: #aaa; /* cinza claro só para o "Assunto" */
+    color: #aaa; /* cinza claro só para o "Assunto" */
 }
 
 /* Todas as opções no dropdown */
 .div-assunto select option {
-  color: grey; /* preto para aparecer bem no fundo claro do menu */
-}
-
-.div-mensagem {
-    display: flex;
-    align-items: start;
-    color: lightgray;
-    padding: 8px;
-    gap: 5px;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid lightgray;
+    background-color: #111;
+    color: white;
 }
 
 .div-mensagem textarea {
-  border: none;
-  outline: none;
-  flex: 1;
-  color: lightgray;      /* texto digitado */
-  caret-color: orangered;
+    border: none;
+    outline: none;
+    flex: 1;
+    color: lightgray;       /* texto digitado */
+    caret-color: orangered;
+    resize: vertical;
 }
 
 .div-mensagem textarea::placeholder {
     color: lightgray;
+}
+
+/*Dica abaixo do campo*/
+.dica-campo {
+    margin-top: -4px;
+    margin-bottom: 10px;
+    color: #777 !important;
+    font-size: 11px !important;
+}
+
+/*Consentimento*/
+.consentimento {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.consentimento input {
+    margin-top: 2px;
+    accent-color: orangered;
+    cursor: pointer;
+}
+
+.consentimento a {
+    color: orangered;
+    text-decoration: none;
+    border-bottom: 1px solid orangered;
+    transition: all ease 0.25s;
+}
+
+.consentimento a:hover {
+    color: white;
+    border-color: white;
 }
 
 .botao-formulario {
@@ -235,10 +355,10 @@ main {
     text-decoration: none;
     font-weight: bolder;
     letter-spacing: 2px;
-    font-size: 12px
+    font-size: 12px;
 }
 
-.botao-formulario i{
+.botao-formulario i {
     font-size: 12px;
     font-weight: bold;
     background-color: transparent !important;
@@ -246,25 +366,25 @@ main {
 
 .botao-formulario:hover {
     transition: all ease 0.25s;
-    background-color: rgb(255, 60, 0);
+    background-color: rgb(255, 60, 0) !important;
     color: white !important;
     cursor: pointer;
 }
 
 .linha-seguranca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-top: 1px solid #444; /* linha sutil */
-  padding: 10px 0;
-  color: lightgray;
-  font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-top: 1px solid #444; /* linha sutil */
+    padding: 10px 0;
+    color: lightgray;
+    font-size: 12px;
 }
 
 .linha-seguranca i {
-  color: orangered; /* cor do ícone */
-  font-size: 14px;
+    color: orangered; /* cor do ícone */
+    font-size: 14px;
 }
 
 
@@ -272,12 +392,13 @@ main {
 
 .canais {
     width: 35%;
-    height: 100%;
-    gap: 20px;
+    gap: 12px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     background-color: black;
+    position: sticky;
+    top: 75px;
 }
 
 .nossos-canais {
@@ -286,21 +407,49 @@ main {
     font-size: 11px;
     margin-left: 25px;
     margin-top: 25px;
+    margin-bottom: 8px;
 }
 
 .div-canais {
     margin-right: 25px;
     margin-left: 10px;
-    padding: 12px;
+    padding: 14px 16px;
     display: flex;
     align-items: center;
     gap: 20px;
     letter-spacing: 1px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: all ease 0.25s;
+}
+
+.div-canais:hover {
+    border-color: #333;
+    background-color: #0a0a0a;
+    transform: translateX(4px);
 }
 
 .div-canais i {
     color: white;
     font-size: 30px;
+    min-width: 32px;
+    text-align: center;
+    transition: all ease 0.25s;
+}
+
+.div-canais .seta-canal {
+    margin-left: auto;
+    min-width: auto;
+    color: #555;
+    font-size: 12px;
+    opacity: 0;
+    transition: all ease 0.25s;
+}
+
+.div-canais:hover .seta-canal {
+    color: orangered;
+    opacity: 1;
 }
 
 .textos {
@@ -327,45 +476,147 @@ main {
     font-size: 12px;
 }
 
-.fa-whatsapp:hover {
-  color: #25D366;   /* verde oficial do WhatsApp */
-  cursor: pointer;
-  transition: all ease 0.25s;
+.div-canais:hover .fa-whatsapp {
+    color: #25D366;   /* verde oficial do WhatsApp */
 }
 
-.fa-instagram:hover {
-  background: linear-gradient(45deg, 
-    #feda75, 
-    #fa7e1e, 
-    #d62976, 
-    #962fbf, 
-    #4f5bd5);
-  background-clip: text; /* versão padrão */
-  -webkit-background-clip: text; /* compatibilidade */
-  color: transparent; /* versão padrão */
-  -webkit-text-fill-color: transparent; /* compatibilidade */
-  cursor: pointer;
-  transition: all ease 0.25s;
+.div-canais:hover .fa-instagram {
+    background: linear-gradient(45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5);
+    background-clip: text; /* versão padrão */
+    -webkit-background-clip: text; /* compatibilidade */
+    color: transparent; /* versão padrão */
+    -webkit-text-fill-color: transparent; /* compatibilidade */
 }
 
-.fa-envelope:hover {
-  color: darkorange;
-  cursor: pointer;
-  transition: all ease 0.25s;
+.div-canais:hover .fa-envelope {
+    color: darkorange;
 }
 
-.fa-location-dot:hover {
-  color: #FF0000;   /* vermelho para endereço */
-  cursor: pointer;
-  transition: all ease 0.25s;
+.div-canais:hover .fa-location-dot {
+    color: #FF0000;   /* vermelho para endereço */
 }
 
 .img-ouvidoria {
+    margin: 10px 25px 0 10px;
+}
+
+.img-ouvidoria img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/*ANTES DE ENVIAR - ATALHOS*/
+
+.atalhos-ajuda {
+    background-color: black;
+    padding: 20px 40px 40px 40px;
+    border-top: 1px solid #222;
+}
+
+.atalhos-ajuda h2 {
+    margin-top: 25px;
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.atalhos-ajuda h3 {
+    margin-top: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.atalhos-ajuda .intro-atalhos {
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: lightgray;
+    font-size: 12px;
+}
+
+.cards-atalhos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.atalho-card {
     display: flex;
-    width: 10px;
-    height: 100px;
-    margin-left: 30px;
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all ease 0.25s;
+}
+
+.atalho-card:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.atalho-card i {
+    margin-bottom: 6px;
+    color: #888;
+    font-size: 22px;
+    transition: all ease 0.25s;
+}
+
+.atalho-card:hover i {
+    color: orangered;
+}
+
+.atalho-card h4 {
+    color: white;
+    font-size: 16px;
+}
+
+.atalho-card p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.atalho-card span {
+    margin-top: 6px;
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .bloco-central {
+        flex-direction: column;
+    }
+
+    .formulario,
+    .canais {
+        width: 100%;
+        position: static;
+    }
+
+    .etapas-atendimento,
+    .cards-atalhos {
+        grid-template-columns: 1fr;
+    }
+
+    .botao-formulario {
+        width: 100%;
+    }
+
 }
 
 /*RODAPÉ*/
@@ -376,7 +627,7 @@ main {
     }
 
     .rodape {
-        border-top: 1px solid; 
+        border-top: 1px solid;
         border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
         background-color: black;
         display: flex;
@@ -431,17 +682,17 @@ main {
     }
 
     .rodape-insta i:hover {
-    background: linear-gradient(45deg, 
-    #feda75, 
-    #fa7e1e, 
-    #d62976, 
-    #962fbf, 
-    #4f5bd5);
-  background-clip: text; /* versão padrão */
-  -webkit-background-clip: text; /* compatibilidade */
-  color: transparent; /* versão padrão */
-  -webkit-text-fill-color: transparent; /* compatibilidade */
-  transition: all ease 0.25s;
+        background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+        background-clip: text; /* versão padrão */
+        -webkit-background-clip: text; /* compatibilidade */
+        color: transparent; /* versão padrão */
+        -webkit-text-fill-color: transparent; /* compatibilidade */
+        transition: all ease 0.25s;
     }
 
     .rodape-insta:hover {
@@ -457,7 +708,3 @@ main {
         color: red;
         transition: all ease 0.25s;
     }
-
-
-
-

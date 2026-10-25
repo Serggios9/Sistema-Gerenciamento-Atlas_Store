@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/perguntasfrequentes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Biblioteca de ícones-->
+</head>
+
+<body>
+
+    <header>
+
+        <nav> <!--Cabeçalho Principal-->
+
+            <div> <!--Logo da loja-->
+
+                <a href="../../index.html" class="logo">
+                    <h1>
+                        <span class="logo-atlas">ATLAS</span>
+                        <span class="logo-ponto">.</span>
+                        <span class="logo-store">STORE</span>
+                    </h1>
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="apresentacao-faq">
+
+            <!--Imagem solo em Destaque-->
+            <div class="apresentacao-textos-img-destaque">
+                <h1>AJUDA</h1>
+                <h2>PERGUNTAS FREQUENTES</h2>
+                <h3>Reunimos as dúvidas mais comuns sobre compras, entrega, pagamento e trocas.
+                Escolha uma categoria e encontre a resposta rapidinho.</h3>
+            </div>
+
+        </section>
+
+        <section class="faq">
+
+            <h2 class="rotulo-secao">CATEGORIAS</h2>
+            <h3 class="titulo-secao">SOBRE O QUE VOCÊ QUER SABER?</h3>
+            <p class="faq-intro">Clique em uma categoria para filtrar as perguntas.</p>
+
+            <!--Filtros (feitos só com CSS, sem JS)-->
+            <div class="faq-categorias">
+
+                <input type="radio" name="categoria-faq" id="cat-todas" checked>
+                <label class="categoria-tile" for="cat-todas">
+                    <i class="fa-solid fa-list"></i>
+                    <span class="tile-titulo">TODAS</span>
+                    <span class="tile-qtd">18 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-pedidos">
+                <label class="categoria-tile" for="cat-pedidos">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="tile-titulo">PEDIDOS</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-pagamento">
+                <label class="categoria-tile" for="cat-pagamento">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span class="tile-titulo">PAGAMENTO</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-entrega">
+                <label class="categoria-tile" for="cat-entrega">
+                    <i class="fa-solid fa-truck"></i>
+                    <span class="tile-titulo">ENTREGA</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-produtos">
+                <label class="categoria-tile" for="cat-produtos">
+                    <i class="fa-solid fa-shirt"></i>
+                    <span class="tile-titulo">TAMANHOS E PRODUTOS</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-trocas">
+                <label class="categoria-tile" for="cat-trocas">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span class="tile-titulo">TROCAS E DEVOLUÇÕES</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+                <input type="radio" name="categoria-faq" id="cat-conta">
+                <label class="categoria-tile" for="cat-conta">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="tile-titulo">CONTA E CONTATO</span>
+                    <span class="tile-qtd">3 perguntas</span>
+                </label>
+
+            </div>
+
+            <!--Lista de perguntas-->
+            <div class="faq-lista">
+
+                <details class="duvida pedidos">
+                    <summary><span class="duvida-tag">PEDIDOS</span>Como faço uma compra?</summary>
+                    <p>Escolha a peça, selecione o tamanho e clique em ADICIONAR AO CARRINHO. No carrinho, confira os itens, informe o endereço e escolha a forma de pagamento para finalizar.</p>
+                </details>
+
+                <details class="duvida pedidos">
+                    <summary><span class="duvida-tag">PEDIDOS</span>Posso alterar ou cancelar meu pedido?</summary>
+                    <p>Sim, enquanto ele ainda não foi enviado. Fale com a gente o quanto antes pelos nossos canais de atendimento, informando o número do pedido.</p>
+                </details>
+
+                <details class="duvida pedidos">
+                    <summary><span class="duvida-tag">PEDIDOS</span>Como acompanho meu pedido?</summary>
+                    <p>Assim que o pedido for enviado, mandamos o código de rastreamento por e-mail. Com ele, você acompanha a entrega no site da transportadora.</p>
+                </details>
+
+                <details class="duvida pagamento">
+                    <summary><span class="duvida-tag">PAGAMENTO</span>Quais formas de pagamento posso usar?</summary>
+                    <p>As formas disponíveis aparecem na finalização da compra, junto com as condições de parcelamento, quando houver.</p>
+                </details>
+
+                <details class="duvida pagamento">
+                    <summary><span class="duvida-tag">PAGAMENTO</span>Meu pagamento foi recusado. O que fazer?</summary>
+                    <p>Confira os dados digitados e o limite disponível. Se continuar recusando, tente outra forma de pagamento ou fale com o banco ou a operadora do cartão.</p>
+                </details>
+
+                <details class="duvida pagamento">
+                    <summary><span class="duvida-tag">PAGAMENTO</span>É seguro comprar na ATLAS?</summary>
+                    <p>Sim. Seus dados são usados apenas para processar o pedido e não são compartilhados com terceiros. Você pode saber mais na nossa <a href="./politica-privacidade.html">Política de Privacidade</a>.</p>
+                </details>
+
+                <details class="duvida entrega">
+                    <summary><span class="duvida-tag">ENTREGA</span>Qual o prazo de entrega?</summary>
+                    <p>O prazo e o valor do frete são calculados no carrinho, a partir do CEP. O prazo começa a contar depois da confirmação do pagamento.</p>
+                </details>
+
+                <details class="duvida entrega">
+                    <summary><span class="duvida-tag">ENTREGA</span>E se eu não estiver para receber?</summary>
+                    <p>A transportadora costuma tentar a entrega mais de uma vez. Se não conseguir, entre em contato com a gente para combinar uma nova tentativa.</p>
+                </details>
+
+                <details class="duvida entrega">
+                    <summary><span class="duvida-tag">ENTREGA</span>Posso mudar o endereço depois de comprar?</summary>
+                    <p>Se o pedido ainda não foi enviado, sim. Avise o quanto antes pelos nossos canais de atendimento.</p>
+                </details>
+
+                <details class="duvida produtos">
+                    <summary><span class="duvida-tag">PRODUTOS</span>Como escolho o tamanho?</summary>
+                    <p>Grande parte das nossas peças tem modelagem oversized, mais ampla e solta. Se preferir um caimento mais ajustado, escolha um tamanho abaixo do que você costuma usar.</p>
+                </details>
+
+                <details class="duvida produtos">
+                    <summary><span class="duvida-tag">PRODUTOS</span>As cores das fotos são fiéis?</summary>
+                    <p>Fotografamos as peças com o maior cuidado, mas o tom pode variar um pouco conforme a tela do seu dispositivo.</p>
+                </details>
+
+                <details class="duvida produtos">
+                    <summary><span class="duvida-tag">PRODUTOS</span>Como devo lavar minhas peças?</summary>
+                    <p>Para preservar a estampa e o tecido, lave do avesso, em água fria, sem alvejante, e evite a secadora. Siga também as instruções da etiqueta.</p>
+                </details>
+
+                <details class="duvida trocas">
+                    <summary><span class="duvida-tag">TROCAS</span>Qual o prazo para trocar ou devolver?</summary>
+                    <p>Você tem até 7 dias corridos após o recebimento para desistir da compra. Para troca de tamanho ou modelo, e para comunicar defeitos, o prazo é de até 30 dias.</p>
+                </details>
+
+                <details class="duvida trocas">
+                    <summary><span class="duvida-tag">TROCAS</span>Quem paga o frete da troca?</summary>
+                    <p>Em caso de defeito ou envio incorreto, o frete é por nossa conta. Nas trocas por tamanho ou modelo, o frete de envio fica por conta do cliente.</p>
+                </details>
+
+                <details class="duvida trocas">
+                    <summary><span class="duvida-tag">TROCAS</span>Como solicito uma troca?</summary>
+                    <p>É só falar com a gente pelos nossos canais, informando o número do pedido e o motivo. Veja o passo a passo completo em <a href="./devolucoes.html">Trocas e Devoluções</a>.</p>
+                </details>
+
+                <details class="duvida conta">
+                    <summary><span class="duvida-tag">CONTA</span>Como crio minha conta?</summary>
+                    <p>Clique em Login, no menu do site, e siga as instruções de cadastro. Basta preencher seus dados.</p>
+                </details>
+
+                <details class="duvida conta">
+                    <summary><span class="duvida-tag">CONTA</span>Esqueci minha senha. E agora?</summary>
+                    <p>Na tela de login, clique na opção de recuperar senha e siga as instruções enviadas para o seu e-mail.</p>
+                </details>
+
+                <details class="duvida conta">
+                    <summary><span class="duvida-tag">CONTA</span>Como falo com o atendimento?</summary>
+                    <p>Pelo WhatsApp (16) 99189-3182, pelo Instagram @atlas.club.store, pelo e-mail atlasclubcontato01@gmail.com ou pelo formulário da página <a href="./fale-conosco.html">Fale Conosco</a>. Atendemos de segunda a sexta, das 9h às 18h.</p>
+                </details>
+
+            </div>
+
+        </section>
+
+        <section class="faq-ajuda">
+
+            <h2 class="rotulo-secao">AINDA COM DÚVIDAS?</h2>
+            <h3>NÃO ENCONTROU SUA RESPOSTA?</h3>
+            <p class="faq-intro">Fale com a gente por um dos canais abaixo. Respondemos em até 24h.</p>
+
+            <div class="canais-ajuda">
+
+                <a class="canal-card" href="https://wa.me/5516991893182" target="_blank"> <!--Whatsapp-->
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span class="canal-titulo">WHATSAPP</span>
+                    <span class="canal-detalhe">(16) 99189-3182</span>
+                    <span class="canal-horario">Segunda a Sexta - 09h às 18h</span>
+                </a>
+
+                <a class="canal-card" href="https://www.instagram.com/atlas.club.store/" target="_blank"> <!--Instagram-->
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="canal-titulo">INSTAGRAM</span>
+                    <span class="canal-detalhe">@atlas.club.store</span>
+                    <span class="canal-horario">Mande uma DM, responderemos em breve.</span>
+                </a>
+
+                <a class="canal-card" href="mailto:atlasclubcontato01@gmail.com"> <!--Email-->
+                    <i class="fa-regular fa-envelope"></i>
+                    <span class="canal-titulo">EMAIL</span>
+                    <span class="canal-detalhe">atlasclubcontato01@gmail.com</span>
+                    <span class="canal-horario">Respondemos em até 24h</span>
+                </a>
+
+            </div>
+
+            <a class="botao-formulario" href="./fale-conosco.html">ABRIR FORMULÁRIO DE CONTATO
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="logo-rodape"> <!--Logo da loja-->
+
+            <a href="../../index.html" class="logo">
+                <h1>
+                    <span class="logo-atlas">ATLAS</span>
+                    <span class="logo-ponto">.</span>
+                    <span class="logo-store">STORE</span>
+                </h1>
+            </a>
+
+        </div>
+
+
+        <div class="rodape-um">
+            <h2 class="rodape-titulo">ATENDIMENTO</h2>
+            <a class="rodape-links" href="./fale-conosco.html">Fale Conosco</a>
+            <a class="rodape-links" href="./devolucoes.html">Trocas e Devoluções</a>
+        </div>
+
+        <div class="rodape-dois">
+            <h2 class="rodape-titulo">AJUDA</h2>
+            <a class="rodape-ativo" href="#">Perguntas Frequentes</a>
+            <a class="rodape-links" href="./politica-privacidade.html">Política de Privacidade</a>
+        </div>
+
+        <div class="rodape-tres">
+            <h2 class="rodape-titulo">INSTITUCIONAL</h2>
+            <a class="rodape-links" href="./sobre.html">Sobre a ATLAS</a>
+            <a class="rodape-links" href="./trabalhe-conosco.html">Trabalhe Conosco</a>
+        </div>
+
+        <div class="rodape-quatro">
+            <h2 class="rodape-titulo">SIGA A ATLAS</h2>
+            <a class="rodape-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="rodape-tiktok" href="https://www.tiktok.com/pt-BR/" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a class="rodape-youtube" href="https://www.youtube.com/" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+
+
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+/*Estilos Locais do Atlas Store-Política de Privacidade*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+header nav {
+    display: flex; /*Flexbox ativo*/
+    justify-content: center; /*Espaço entre itens*/
+    align-items: center; /*Alinha verticalmente*/
+    gap: 20px; /*Espaço entre os blocos*/
+    padding: 10px 20px; /*Espaço interno do header*/
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/*LOGO*/
+
+.logo {
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;              /* remove margens padrão */
+    line-height: 60px;      /* igual à altura do nav */
+    display: flex;          /* garante alinhamento interno */
+    align-items: center;    /* centraliza verticalmente o texto */
+    text-decoration: none;
+    gap: 2px;
+    padding-left: 20px;
+}
+
+.logo-atlas {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.logo-ponto {
+    color: orangered;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.logo-store {
+    color: grey;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+main {
+    border-top: 2px solid grey;
+}
+
+
+/*Imagem solo em Destaque-parte inicial*/
+
+.apresentacao-privacidade {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.apresentacao-textos-img-destaque {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
+              url("../../footer/img-background-privacidade.png"); /*ADICIONAR IMAGEM*/
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+}
+
+/*Etiqueta com a data de atualização*/
+.tag-atualizacao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 45px;
+    padding: 6px 12px;
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 20px;
+    color: #ccc;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tag-atualizacao i {
+    color: orangered;
+    font-size: 11px;
+}
+
+.apresentacao-textos-img-destaque h1 {
+    margin-top: 18px;
+    color: orangered;
+    font-size: 12px;
+}
+
+.apresentacao-textos-img-destaque h2 {
+    margin-top: 10px;
+    color: white;
+    font-size: 60px;
+}
+
+.apresentacao-textos-img-destaque h3 {
+    max-width: 620px;
+    color: grey;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+
+/*RESUMO EM 3 PONTOS*/
+
+.resumo-privacidade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 22px 40px;
+    background-color: black;
+    border-bottom: 1px solid #222;
+}
+
+.resumo-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.resumo-item i {
+    min-width: 28px;
+    text-align: center;
+    color: orangered;
+    font-size: 22px;
+}
+
+.resumo-item h4 {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+}
+
+.resumo-item p {
+    color: #777;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/*BLOCO CENTRAL - ÍNDICE E TEXTO*/
+
+.bloco-central {
+    background-color: black;
+    display: flex;
+    align-items: flex-start; /*permite o índice ficar fixo ao rolar*/
+    width: 100%;
+    border-right: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+/*Índice lateral*/
+.indice-politica {
+    width: 28%;
+    padding: 30px 30px 30px 40px;
+    background-color: black;
+    position: sticky;
+    top: 75px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+}
+
+.indice-politica h2 {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 14px;
+}
+
+.indice-politica ol {
+    list-style: none;
+}
+
+.indice-politica a {
+    display: flex;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #1a1a1a;
+    color: #888;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all ease 0.25s;
+}
+
+.indice-politica a span {
+    color: orangered;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.indice-politica a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+
+/*Texto da política*/
+.politica-texto {
+    width: 72%;
+    padding: 30px 40px 40px 40px;
+    background-color: black;
+    border-left: 1px solid;
+    border-image: linear-gradient(to top, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.politica-secao {
+    padding: 26px 0;
+    border-bottom: 1px solid #222;
+    scroll-margin-top: 80px;
+}
+
+.politica-secao:first-child {
+    padding-top: 0;
+}
+
+.politica-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.numero-secao {
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: all ease 0.25s;
+}
+
+.politica-secao:target .numero-secao {
+    color: orangered; /*destaca a seção aberta pelo índice*/
+}
+
+.politica-cabecalho h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.politica-secao p {
+    color: lightgray;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.politica-secao p:last-child {
+    margin-bottom: 0;
+}
+
+.politica-secao a {
+    color: orangered;
+    text-decoration: none;
+    border-bottom: 1px solid orangered;
+    transition: all ease 0.25s;
+}
+
+.politica-secao a:hover {
+    color: white;
+    border-color: white;
+}
+
+.politica-secao ul {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.politica-secao li {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0;
+    color: lightgray;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.politica-secao li::before {
+    content: "▪";
+    color: orangered;
+}
+
+.politica-secao li strong {
+    color: white;
+}
+
+/*Trechos que você precisa preencher*/
+.preencher {
+    padding: 0 5px;
+    border-radius: 2px;
+    background-color: rgba(255, 69, 0, 0.15);
+    color: orangered;
+    font-weight: 600;
+}
+
+
+/*TABELA DE DADOS*/
+
+.tabela-rolagem {
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.tabela-dados th {
+    padding: 10px 12px;
+    border-bottom: 1px solid orangered;
+    color: orangered;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.tabela-dados td {
+    padding: 12px;
+    border-bottom: 1px solid #1f1f1f;
+    color: lightgray;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.tabela-dados td:first-child {
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tabela-dados tr:hover td {
+    background-color: #0a0a0a;
+}
+
+
+/*CAIXA DE CONTATO*/
+
+.caixa-contato {
+    margin-top: 30px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #333;
+    border-left: 3px solid orangered;
+    border-radius: 4px;
+}
+
+.caixa-contato .rotulo-contato {
+    color: orangered;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.caixa-contato h3 {
+    margin: 6px 0 4px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.caixa-contato p {
+    color: lightgrey;
+    font-size: 12px;
+}
+
+.botao-contato {
+    flex-shrink: 0;
+    padding: 15px 22px;
+    color: black;
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: all 0.1s ease;
+}
+
+.botao-contato:hover {
+    transition: all ease 0.25s;
+    background-color: rgb(255, 60, 0);
+    color: white;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .bloco-central {
+        flex-direction: column;
+    }
+
+    .indice-politica,
+    .politica-texto {
+        width: 100%;
+        position: static;
+        max-height: none;
+    }
+
+    .resumo-privacidade {
+        grid-template-columns: 1fr;
+    }
+
+    .caixa-contato {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/*RODAPÉ*/
+
+
+    .logo-rodape {
+        margin-right: 30px;
+    }
+
+    .rodape {
+        border-top: 1px solid;
+        border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+        background-color: black;
+        display: flex;
+        max-width: 100%;
+        height: 20vh;
+        color: white;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .rodape-titulo {
+        text-transform: uppercase;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .rodape-ativo {
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid orangered;
+        display: inline-block !important;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-ativo:hover {
+        border-bottom: 1px solid white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-links {
+        text-decoration: none;
+        color: grey;
+        display: flex;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-links:hover {
+        color: white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-insta, .rodape-tiktok, .rodape-youtube {
+        color: grey;
+        text-decoration: none;
+        font-size: large;
+        margin-right: 15px;
+    }
+
+    .rodape-insta i:hover {
+        background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+        background-clip: text; /* versão padrão */
+        -webkit-background-clip: text; /* compatibilidade */
+        color: transparent; /* versão padrão */
+        -webkit-text-fill-color: transparent; /* compatibilidade */
+        transition: all ease 0.25s;
+    }
+
+    .rodape-insta:hover {
+        transition: all ease 0.25s;
+    }
+
+    .rodape-tiktok:hover {
+        color: white;
+        transition: all ease 0.25s;
+    }
+
+    .rodape-youtube:hover {
+        color: red;
+        transition: all ease 0.25s;
+    }
