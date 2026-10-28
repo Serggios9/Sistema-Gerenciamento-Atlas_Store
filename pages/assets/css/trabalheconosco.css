@@ -1,0 +1,824 @@
+/*Estilos Locais do Atlas Store-Trabalhe Conosco*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+header nav {
+    display: flex; /*Flexbox ativo*/
+    justify-content: center; /*Espaço entre itens*/
+    align-items: center; /*Alinha verticalmente*/
+    gap: 20px; /*Espaço entre os blocos*/
+    padding: 10px 20px; /*Espaço interno do header*/
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/*LOGO*/
+
+.logo {
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;              /* remove margens padrão */
+    line-height: 60px;      /* igual à altura do nav */
+    display: flex;          /* garante alinhamento interno */
+    align-items: center;    /* centraliza verticalmente o texto */
+    text-decoration: none;
+    gap: 2px;
+    padding-left: 20px;
+}
+
+.logo-atlas {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.logo-ponto {
+    color: orangered;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+.logo-store {
+    color: grey;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+main {
+    border-top: 2px solid grey;
+}
+
+
+/*Imagem solo em Destaque-parte inicial*/
+
+.apresentacao-trabalhe {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.apresentacao-textos-img-destaque {
+    background-color:  #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 50px 40px;
+    margin-top: 15px;
+}
+
+/*Etiqueta com ponto pulsante*/
+.tag-talentos {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 45px;
+    padding: 6px 12px;
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 20px;
+    color: #ccc;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tag-talentos-ponto {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: orangered;
+    animation: pulsar 1.6s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0.7); }
+    70%  { box-shadow: 0 0 0 8px rgba(255, 69, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 69, 0, 0); }
+}
+
+.apresentacao-textos-img-destaque h1 {
+    margin-top: 18px;
+    color: orangered;
+    font-size: 12px;
+}
+
+.apresentacao-textos-img-destaque h2 {
+    margin-top: 10px;
+    color: white;
+    font-size: 60px;
+}
+
+.apresentacao-textos-img-destaque h3 {
+    max-width: 560px;
+    color: grey;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.botoes-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-candidatar,
+.btn-ver-areas {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid orangered;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.btn-candidatar {
+    background-color: orangered;
+    color: black;
+}
+
+.btn-candidatar:hover {
+    background-color: rgb(255, 60, 0);
+    color: white;
+}
+
+.btn-ver-areas {
+    color: white;
+}
+
+.btn-ver-areas:hover {
+    background-color: orangered;
+    color: white;
+}
+
+
+/*SEÇÕES DA PÁGINA*/
+
+.secao-pagina {
+    padding: 20px 40px 30px 40px;
+    background-color: black;
+    border-bottom: 1px solid #222;
+    scroll-margin-top: 70px;
+}
+
+.rotulo-secao {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.titulo-secao {
+    margin-top: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.intro-secao {
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/*POR QUE A ATLAS - CARDS DE VALORES*/
+
+.cards-valores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-valor {
+    padding: 24px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    transition: all ease 0.25s;
+}
+
+.card-valor:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.card-valor i {
+    margin-bottom: 14px;
+    color: orangered;
+    font-size: 24px;
+}
+
+.card-valor h4 {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.card-valor p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/*ÁREAS DA ATLAS*/
+
+.cards-areas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.card-area {
+    position: relative;
+    overflow: hidden;
+    min-height: 170px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid #222;
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    transition: all ease 0.3s;
+}
+
+.card-area::before { /*número fantasma ao fundo*/
+    content: attr(data-numero);
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    color: transparent;
+    -webkit-text-stroke: 1px #2a2a2a;
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1;
+    transition: all ease 0.3s;
+}
+
+.card-area:hover {
+    border-color: orangered;
+    transform: translateY(-4px);
+}
+
+.card-area:hover::before {
+    -webkit-text-stroke-color: orangered;
+}
+
+.card-area i {
+    margin-bottom: 12px;
+    color: white;
+    font-size: 22px;
+    transition: all ease 0.3s;
+}
+
+.card-area:hover i {
+    color: orangered;
+}
+
+.card-area h4 {
+    margin-bottom: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.card-area p {
+    color: #999;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/*COMO FUNCIONA O PROCESSO*/
+
+.processo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.passo-processo {
+    padding-top: 18px;
+    border-top: 1px solid #333;
+    transition: all ease 0.25s;
+}
+
+.passo-processo:hover {
+    border-top-color: orangered;
+}
+
+.numero-passo {
+    display: block;
+    margin-bottom: 10px;
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+    transition: all ease 0.25s;
+}
+
+.passo-processo:hover .numero-passo {
+    color: orangered;
+}
+
+.passo-processo h4 {
+    margin-bottom: 6px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.passo-processo p {
+    color: #999;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/*BLOCO CENTRAL - FORMULÁRIO E DICAS*/
+
+.bloco-central {
+    background-color: black;
+    display: flex;
+    align-items: flex-start; /*permite a coluna de dicas ficar fixa ao rolar*/
+    width: 100%;
+    border-right: 1px solid;
+    border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+    scroll-margin-top: 70px;
+}
+
+.formulario {
+    width: 65%;
+    gap: 20px;
+    padding: 20px 40px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: lightgray !important;
+    border-right: 1px solid;
+    border-image: linear-gradient(to top, #000000, #444444, #888888, #444444, #000000) 1;
+}
+
+.formulario h2 {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.formulario h3 {
+    color: white;
+    font-size: 20px;
+}
+
+.formulario p {
+    color: lightgray;
+    font-size: 12px;
+}
+
+/*Campos (mesmo estilo para todos)*/
+.input-box,
+.div-assunto,
+.div-mensagem {
+    display: flex;
+    align-items: center;
+    color: lightgray;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    transition: all ease 0.25s;
+}
+
+.div-mensagem {
+    align-items: flex-start;
+    gap: 5px;
+}
+
+/*Campo em foco: borda e ícone laranja*/
+.input-box:focus-within,
+.div-assunto:focus-within,
+.div-mensagem:focus-within {
+    border-color: orangered;
+    box-shadow: 0 0 0 1px rgba(255, 69, 0, 0.35);
+}
+
+.input-box:focus-within i,
+.div-assunto:focus-within i,
+.div-mensagem:focus-within i {
+    color: orangered;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    color: lightgray;       /* texto digitado */
+    caret-color: orangered; /* cor do cursor */
+}
+
+.input-box input::placeholder {
+    color: lightgray;
+}
+
+.div-assunto select {
+    border: none;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    color: #fff; /* cor da opção selecionada */
+    cursor: pointer;
+}
+
+.div-assunto select option[disabled] {
+    color: #aaa;
+}
+
+.div-assunto select option {
+    background-color: #111;
+    color: white;
+}
+
+.div-mensagem textarea {
+    border: none;
+    outline: none;
+    flex: 1;
+    color: lightgray;       /* texto digitado */
+    caret-color: orangered;
+    resize: vertical;
+}
+
+.div-mensagem textarea::placeholder {
+    color: lightgray;
+}
+
+/*Campo de currículo (botão de arquivo estilizado)*/
+.input-box input[type="file"] {
+    color: #aaa;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.input-box input[type="file"]::file-selector-button {
+    margin-right: 12px;
+    padding: 6px 12px;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    background-color: transparent;
+    color: orangered;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all ease 0.25s;
+}
+
+.input-box input[type="file"]::file-selector-button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/*Dica abaixo do campo*/
+.dica-campo {
+    margin-top: -4px;
+    margin-bottom: 10px;
+    color: #777 !important;
+    font-size: 11px !important;
+}
+
+/*Consentimento*/
+.consentimento {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: lightgray;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.consentimento input {
+    margin-top: 2px;
+    accent-color: orangered;
+    cursor: pointer;
+}
+
+.consentimento a {
+    color: orangered;
+    text-decoration: none;
+    border-bottom: 1px solid orangered;
+    transition: all ease 0.25s;
+}
+
+.consentimento a:hover {
+    color: white;
+    border-color: white;
+}
+
+.botao-formulario {
+    display: inline-block;
+    color: black;
+    width: 80%;
+    background-color: orangered !important;
+    border: 1px solid orangered;
+    padding: 15px;
+    transition: all 0.1s ease;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.botao-formulario i {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: transparent !important;
+}
+
+.botao-formulario:hover {
+    transition: all ease 0.25s;
+    background-color: rgb(255, 60, 0) !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+.linha-seguranca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-top: 1px solid #444; /* linha sutil */
+    padding: 10px 0;
+    color: lightgray;
+    font-size: 12px;
+}
+
+.linha-seguranca i {
+    color: orangered; /* cor do ícone */
+    font-size: 14px;
+}
+
+
+/*BLOCO CENTRAL - DICAS E CONTATO*/
+
+.dicas {
+    width: 35%;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: sticky;
+    top: 75px;
+}
+
+.rotulo-dicas {
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.lista-dicas {
+    margin: 0 25px 0 10px;
+    list-style: none;
+}
+
+.lista-dicas li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 12px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.lista-dicas li i {
+    min-width: 26px;
+    margin-top: 2px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    transition: all ease 0.25s;
+}
+
+.lista-dicas li:hover i {
+    color: orangered;
+}
+
+.lista-dicas .titulo {
+    display: block;
+    padding-bottom: 3px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lista-dicas .detalhes {
+    color: lightgrey;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.email-direto {
+    margin: 0 25px 0 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #333;
+    border-left: 3px solid orangered;
+    border-radius: 4px;
+}
+
+.email-direto .rotulo-email {
+    color: orangered;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.email-direto h3 {
+    color: white;
+    font-size: 17px;
+}
+
+.email-direto p {
+    color: lightgrey;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.botao-email {
+    display: block;
+    margin-top: 5px;
+    padding: 14px;
+    text-align: center;
+    color: white;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 11px;
+    transition: all 0.25s ease;
+}
+
+.botao-email:hover {
+    background-color: orangered;
+    color: white;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .cards-valores,
+    .cards-areas,
+    .processo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bloco-central {
+        flex-direction: column;
+    }
+
+    .formulario,
+    .dicas {
+        width: 100%;
+        position: static;
+    }
+
+    .botao-formulario {
+        width: 100%;
+    }
+
+}
+
+/*RODAPÉ*/
+
+
+    .logo-rodape {
+        margin-right: 30px;
+    }
+
+    .rodape {
+        border-top: 1px solid;
+        border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
+        background-color: black;
+        display: flex;
+        max-width: 100%;
+        height: 20vh;
+        color: white;
+        justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .rodape-titulo {
+        text-transform: uppercase;
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .rodape-ativo {
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid orangered;
+        display: inline-block !important;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-ativo:hover {
+        border-bottom: 1px solid white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-links {
+        text-decoration: none;
+        color: grey;
+        display: flex;
+        font-size: smaller;
+        padding-top: 3px;
+    }
+
+    .rodape-links:hover {
+        color: white;
+        transition: ease all 0.25s;
+    }
+
+    .rodape-insta, .rodape-tiktok, .rodape-youtube {
+        color: grey;
+        text-decoration: none;
+        font-size: large;
+        margin-right: 15px;
+    }
+
+    .rodape-insta i:hover {
+        background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+        background-clip: text; /* versão padrão */
+        -webkit-background-clip: text; /* compatibilidade */
+        color: transparent; /* versão padrão */
+        -webkit-text-fill-color: transparent; /* compatibilidade */
+        transition: all ease 0.25s;
+    }
+
+    .rodape-insta:hover {
+        transition: all ease 0.25s;
+    }
+
+    .rodape-tiktok:hover {
+        color: white;
+        transition: all ease 0.25s;
+    }
+
+    .rodape-youtube:hover {
+        color: red;
+        transition: all ease 0.25s;
+    }

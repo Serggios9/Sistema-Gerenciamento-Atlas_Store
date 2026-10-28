@@ -79,9 +79,7 @@ main {
 }
 
 .apresentacao-textos-img-destaque {
-    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
-              url("../../footer/img-background-privacidade.png"); /*ADICIONAR IMAGEM*/
-    background-color: #111;
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

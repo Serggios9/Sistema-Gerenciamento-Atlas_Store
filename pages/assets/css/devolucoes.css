@@ -79,9 +79,7 @@ main {
 }
 
 .apresentacao-textos-img-destaque {
-    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)),
-              url("../../footer/img-background-devolucoes.png"); /*ADICIONAR IMAGEM*/
-    background-color: #111;
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -116,7 +114,7 @@ main {
 .bloco-central {
     background-color: black;
     display: flex;
-    align-items: flex-start; /*permite o resumo ficar fixo ao rolar*/
+    align-items: flex-start; 
     width: 100%;
     border-right: 1px solid;
     border-image: linear-gradient(to left, #000000, #444444, #888888, #444444, #000000) 1;
