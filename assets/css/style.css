@@ -320,51 +320,802 @@ main {
     transition: all 0.25s ease;
 }
 
-/*MENU CENTRAL*/
-.menu-central ul {
+/*Estilos locais do Atlas Store-Index (seções após o hero)*/
+
+/*FUNDO PRETO: sem isso, a margem de 15px do rodapé (.rodape margin-top)
+  deixa aparecer o fundo branco padrão do navegador, formando a faixa branca*/
+body {
+    background-color: black;
+}
+
+main {
+    display: flow-root;
+    background-color: black;
+}
+
+
+/*CABEÇALHO DAS SEÇÕES*/
+
+.cabecalho-home {
     display: flex;
-    max-width: 100%;
-    height: auto;
-    list-style: none;
+    align-items: flex-end;
+    justify-content: space-between;
     gap: 20px;
-    padding: 0;
+    margin-top: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cabecalho-home-texto {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.numero-home {
+    color: transparent;
+    -webkit-text-stroke: 1px orangered;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.cabecalho-home h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+
+.cabecalho-home p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 520px;
     margin: 0;
-    background-color: black;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    justify-content: center;
 }
 
-.menu-central li a {
-    display: inline-block;
-    color: black;
+.link-ver-tudo {
+    color: #ccc;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-decoration: none;
-    padding: 8px 20px;
-    background-color: black;
-    color: grey;
+    padding: 10px 14px;
+    border: 1px solid rgba(169, 169, 169, 0.406);
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.link-ver-tudo:hover {
+    border-color: orangered;
+    background-color: orangered;
+    color: white;
+}
+
+
+/*BOTÕES (usados nos banners)*/
+
+.btn-home-primario,
+.btn-home-secundario {
+    display: inline-block;
+    padding: 15px 24px;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.btn-home-primario {
+    background-color: orangered;
+    color: black;
+}
+
+.btn-home-primario:hover {
+    background-color: rgb(255, 60, 0);
+    color: white;
+}
+
+.btn-home-secundario {
+    border-color: rgba(169, 169, 169, 0.5);
+    color: white;
+}
+
+.btn-home-secundario:hover {
+    border-color: orangered;
+    background-color: orangered;
+}
+
+
+/* ------------------------------------------------------------
+   01 - VITRINE COM MODELOS (abas filtram os cards)
+   ------------------------------------------------------------ */
+
+.vitrine-conteudo {
+    margin: 25px 20px 0 20px;
+}
+
+/*Abas (feitas com radio + label, sem JS)*/
+.abas-home {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.abas-home input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.abas-home label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 18px;
+    border: 1px solid #2a2a2a;
+    border-radius: 30px;
+    color: #aaa;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.abas-home label i {
+    color: orangered;
+    font-size: 12px;
+    transition: 0.25s ease;
+}
+
+.abas-home label:hover {
+    border-color: orangered;
+    color: white;
+}
+
+.abas-home input:checked + label {
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+}
+
+.abas-home input:checked + label i {
+    color: white;
+}
+
+.abas-home input:focus-visible + label {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/*Esconde os cards das outras categorias quando uma aba é escolhida*/
+.vitrine-conteudo:has(#aba-streetwear:checked) .card-modelo:not(.streetwear),
+.vitrine-conteudo:has(#aba-futebol:checked) .card-modelo:not(.futebol),
+.vitrine-conteudo:has(#aba-basquete:checked) .card-modelo:not(.basquete),
+.vitrine-conteudo:has(#aba-nfl:checked) .card-modelo:not(.nfl) {
+    display: none;
+}
+
+/*Grade de cards*/
+.cards-modelos-home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.card-modelo {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #1f1f1f;
+    border-radius: 12px;
+    background-color: #111;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    animation: card-aparecer 0.4s ease backwards;
+}
+
+@keyframes card-aparecer {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-modelo:hover {
+    transform: translateY(-5px);
+    border-color: orangered;
+}
+
+.card-modelo-imagem {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background-color: #1a1a1a; /*cor de reserva enquanto não há imagem*/
+}
+
+.card-modelo-imagem img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.45s ease, transform 0.6s ease;
+}
+
+/*Foto do produto aparece ao passar o mouse*/
+.card-modelo-imagem .foto-produto {
+    opacity: 0;
+}
+
+.card-modelo:hover .foto-produto {
+    opacity: 1;
+}
+
+.card-modelo:hover .foto-modelo {
+    transform: scale(1.05);
+}
+
+.selo-home {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: orangered;
+    box-shadow: 0 2px 8px rgba(255, 69, 0, 0.4);
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-modelo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 16px 18px 16px;
+}
+
+.card-modelo-marca {
+    color: #666;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.card-modelo-info h3 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.card-modelo-tamanhos {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 8px;
+}
+
+.tamanho-home {
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #999;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.tamanho-home:hover {
+    border-color: #777;
+    color: white;
+}
+
+.tamanho-home.selecionado { /*Ativar Via JS depois-Botão selecionado*/
+    border-color: orangered;
+    color: white;
+}
+
+.card-modelo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.preco-home {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.botao-adicionar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: orangered;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.botao-adicionar:hover {
+    background-color: rgb(255, 60, 0);
+    transform: translateY(-2px);
+}
+
+
+/* ------------------------------------------------------------
+   LOOKBOOK - BANNER EDITORIAL
+   ------------------------------------------------------------ */
+
+.lookbook-home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    margin-top: 60px;
+    padding: 60px 40px;
+    background: linear-gradient(to right, black 12%, rgba(0, 0, 0, 0.25) 70%), /*degradê lateral*/
+                linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 22%),
+                linear-gradient(to top, black, rgba(0, 0, 0, 0) 22%),
+                url("../images/apresentacao/img-background-index-greys.png");
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lookbook-home-textos {
+    max-width: 520px;
+}
+
+.lookbook-rotulo {
+    display: block;
+    margin-bottom: 14px;
+    color: orangered;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.lookbook-home h2 {
+    margin: 0 0 18px 0;
+    color: white;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.lookbook-home h2 span {
+    color: orangered;
+}
+
+.lookbook-home p {
+    margin: 0 0 28px 0;
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.lookbook-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ------------------------------------------------------------
+   02 - EXPLORE POR UNIVERSO (painel que expande no hover)
+   ------------------------------------------------------------ */
+
+.painel-universos {
+    display: flex;
+    gap: 12px;
+    height: 540px;
+    margin: 25px 20px 0 20px;
+}
+
+.card-universo {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 16px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    background-color: #0d0d0d; /*cor de reserva enquanto não há imagem*/
+    text-decoration: none;
+    transition: flex 0.55s ease, border-color 0.3s ease;
+}
+
+/*Camada do background (separada para dar zoom no hover)*/
+.card-universo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease;
+}
+
+/*Camada escura por cima da imagem*/
+.card-universo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.1) 65%);
+}
+
+.card-universo > * {
+    position: relative;
+    z-index: 1;
+}
+
+/*Quando passa o mouse no painel, todos encolhem e o card do hover expande*/
+.painel-universos:hover .card-universo {
+    flex: 0.9;
+}
+
+.painel-universos .card-universo:hover {
+    flex: 3;
+    border-color: orangered;
+}
+
+.card-universo:hover::before {
+    transform: scale(1.06);
+}
+
+/*BACKGROUNDS (um por universo, com modelo)*/
+.card-universo.fe::before { /*FÉ*/
+    background-image: url("../images/apresentacao/background-fe.png");
+    background-position: 50% center;
+}
+
+.card-universo.academia::before { /*ACADEMIA*/
+    background-image: url("../images/apresentacao/background-academia.png");
+    background-position: 45% center;
+}
+
+.card-universo.futebol::before { /*FUTEBOL*/
+    background-image: url("../images/apresentacao/background-futebol.png");
+    background-position: 25% center;
+}
+
+.card-universo.basquete::before { /*BASQUETE*/
+    background-image: url("../images/apresentacao/background-basquete.png"); 
+    background-position: 51% center;
+}
+
+.card-universo.nfl::before { /*NFL*/
+    background-image: url("../images/apresentacao/background-nfl.png");
+}
+
+.card-universo.motorsport::before { /*MOTORSPORT*/
+    background-image: url("../images/apresentacao/background-motorsport.png");
+    background-position: 42% center;
+}
+
+.universo-numero {
+    position: absolute !important;
+    top: 14px;
+    left: 16px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    transition: 0.3s ease;
+}
+
+.card-universo:hover .universo-numero {
+    -webkit-text-stroke-color: orangered;
+}
+
+.card-universo h3 {
+    margin: 0 0 6px 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: font-size 0.4s ease;
+}
+
+.card-universo:hover h3 {
+    font-size: 30px;
+}
+
+/*Descrição e link só aparecem no card expandido*/
+.universo-detalhes {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.card-universo:hover .universo-detalhes {
+    max-height: 90px;
+    opacity: 1;
+}
+
+.universo-detalhes p {
+    margin: 0 0 12px 0;
+    max-width: 300px;
+    color: #ccc;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.universo-link {
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ------------------------------------------------------------
+   OFERTAS - BANNER COM MODELO
+   ------------------------------------------------------------ */
+
+.oferta-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 420px;
+    margin: 60px 20px 0 20px;
+    overflow: hidden;
+    border: 1px solid #222;
+    border-radius: 14px;
+    background-color: #0d0d0d;
+}
+
+.oferta-home-textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.oferta-etiqueta {
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border: 1px solid orangered;
+    border-radius: 20px;
+    color: orangered;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.oferta-home h2 {
+    margin: 0 0 14px 0;
+    color: white;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.oferta-home h2 span {
+    color: orangered;
+}
+
+.oferta-home-textos p {
+    max-width: 380px;
+    margin: 0 0 28px 0;
+    color: #aaa;
     font-size: 14px;
+    line-height: 1.6;
 }
 
-.menu-central li a:hover {
+.oferta-home-imagem {
+    background: linear-gradient(to right, #0d0d0d, rgba(13, 13, 13, 0) 40%),
+                url("../images/apresentacao/img-ofertas.jpg");
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------------------------------------------------
+   03 - NO FEED DA ATLAS (grade estilo Instagram)
+   ------------------------------------------------------------ */
+
+.grade-instagram {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 25px 20px 0 20px;
+}
+
+.foto-insta {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+}
+
+.foto-insta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.foto-insta-icone {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 69, 0, 0.75);
     color: white;
-    transition: all 0.3s ease; /*Animação suave*/
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.menu-central i {
+.foto-insta:hover .foto-insta-icone {
+    opacity: 1;
+}
+
+.foto-insta:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ------------------------------------------------------------
+   PRÓXIMOS DROPS (newsletter)
+   ------------------------------------------------------------ */
+
+.drops-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 60px 20px 40px 20px;
+    padding: 30px 35px;
+    border: 1px solid #222;
+    border-left: 3px solid orangered;
+    border-radius: 4px;
+}
+
+.drops-home-texto p {
+    margin: 0 0 6px 0;
     color: orangered;
-    padding-right: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.menu-central li a.ativo {
+.drops-home-texto h3 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-size: 22px;
+}
+
+.drops-home-texto span {
+    color: #888;
+    font-size: 12px;
+}
+
+.form-drops-home {
+    display: flex;
+    gap: 10px;
+}
+
+.form-drops-home input {
+    width: 280px;
+    padding: 14px 16px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background-color: #0d0d0d;
     color: white;
-    border-bottom: 2px solid orangered;
-    padding-bottom: 12px;
-    font-weight: bolder;
+    font-size: 12px;
+    outline: none;
+    transition: 0.25s ease;
 }
 
-.menu-central li a.ativo:hover {
+.form-drops-home input:focus {
+    border-color: orangered;
+}
+
+.form-drops-home button {
+    padding: 14px 22px;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    background-color: orangered;
+    color: black;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-drops-home button:hover {
+    background-color: transparent;
     color: orangered;
-    border-bottom: 2px solid white;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .cards-modelos-home {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .painel-universos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-universo {
+        min-height: 200px;
+    }
+
+    .card-universo .universo-detalhes {
+        max-height: 90px;
+        opacity: 1;
+    }
+
+    .oferta-home {
+        grid-template-columns: 1fr;
+    }
+
+    .oferta-home-imagem {
+        min-height: 300px;
+    }
+
+    .grade-instagram {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .drops-home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cabecalho-home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .lookbook-home h2 {
+        font-size: 40px;
+    }
+
 }
 
 /*RODAPÉ*/
@@ -456,78 +1207,4 @@ main {
         transition: all ease 0.25s;
     }
 
-/*RESPONSIVIDADE*/
-@media (max-width: 768px) {
-    .logo-atlas {
-        font-size: 15px;
-    }
-    .logo-ponto {
-        font-size: 15px;
-    }
-    .logo-store {
-        font-size: 15px;
-    }
-    .menu {
-        display: none; /* esconde o menu em telas pequenas */
-    }
-    .login {
-        display: none; /* opcional: esconde login */
-    }
-    .main {
-        margin-top: 30px;
-    }
-    .apresentacao {
-        flex-direction: column; /*Empilha textos e imagens*/
-        text-align: left;
-        height: 100vh;
-        padding-top: 10px;
-    }
-    .apresentacao-textos {
-        text-align: left;
-    }
-    .apresentacao-textos h2 {
-        font-size: 10px;
-    }
-    .apresentacao-textos h3 {
-        font-size: 40px;
-    }
-    .apresentacao-textos p {
-        font-size: 13px;
-    }
-    .apresentacao-botoes {
-        flex-wrap: wrap;
-        display: flex;
-        background-color: black;
-        margin-right: 25px;
-    }
-    .btn-colecao {
-        margin: 10px auto ;
-    }
-    .btn-esportiva {
-        margin: 10px auto ;
-    }
-    .apresentacao-textos, .apresentacao-imagens {
-        max-width: 100%;
-    }
-    .apresentacao-imagens img {
-        display: none;
-    }
-
-     .menu-central ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    height: auto;             /* deixa crescer conforme o conteúdo */
-    padding: 10px;
-    margin: 0;
-  }
-
-  .menu-central li a {
-    padding: 12px 20px;       /* reduz padding */
-    font-size: 12px;          /* texto menor */
-    text-align: center;
-    display: inline-block;
-  }
-}
 

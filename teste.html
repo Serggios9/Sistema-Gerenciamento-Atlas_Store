@@ -1,0 +1,459 @@
+    <main>
+        <section class="apresentacao">
+
+            <!-- Coluna esquerda: textos e botões -->
+            <div class="apresentacao-textos">
+
+                <div class="slogan-um">
+                    <span><i class="fa-solid fa-minus"></i></span>
+                    <span class="texto">ESTILO EM <br> TODAS AS DIREÇÕES</span>
+                </div>
+
+                <h3>MAIS <br> QUE ROUPAS, <br> <span>É ATITUDE.</span></h3>
+
+                <p class="texto-um">
+                    Esporte, cultura e atitude. Diferentes universos unidos pelo mesmo estilo.
+                </p>
+                
+                <!--ÍCONES-->
+            <div class="menu-icons">
+
+                <div class="item"> <!--FÉ-->
+                    <span class="icone"><i class="fa-solid fa-cross"></i></span>
+                    <span class="texto">FAITH</span>
+                </div>
+
+                <div class="item"> <!--ACADEMIA-->
+                    <span class="icone"><i class="fa-solid fa-dumbbell"></i></span>
+                    <span class="texto">ACADEMIA</span>
+                </div>
+
+                <div class="item"> <!--FUTEBOL-->
+                    <span class="icone"><i class="fa-regular fa-futbol"></i></span>
+                    <span class="texto">FUTEBOL</span>
+                </div>
+
+                <div class="item"> <!--BASQUETE-->
+                    <span class="icone"><i class="fa-solid fa-basketball"></i></span>
+                    <span class="texto">BASQUETE</span>
+                </div>
+
+                <div class="item"> <!--NFL-->
+                    <span class="icone"><i class="fa-solid fa-football"></i></span>
+                    <span class="texto">NFL</span>
+                </div>
+
+                <div class="item"> <!--MOTORSPORT-->
+                    <span class="icone"><i class="fa-solid fa-flag-checkered"></i></span>
+                    <span class="texto">MOTORSPORT</span>
+                </div>
+            </div>
+            
+                <!-- Botões de ação -->
+                <div class="apresentacao-botoes">
+                    <a class="btn-colecao" href="pages/colecoes.html">
+                        EXPLORAR COLEÇÕES
+                    <i class="fa-solid fa-arrow-right-long"></i>                    
+                    </a>
+                    <a class="btn-esportiva" href="pages/esportes.html">ÁREA ESPORTIVA</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!--01 - Vitrine com modelos-->
+        <section class="vitrine-home" id="vitrine">
+
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">01</span>
+                    <div>
+                        <h2>OS MAIS DESEJADOS</h2>
+                        <p>As peças que estão fazendo sucesso, direto dos nossos modelos para o seu guarda-roupa.</p>
+                    </div>
+                </div>
+                <a class="link-ver-tudo" href="pages/colecoes.html">VER TODAS AS COLEÇÕES →</a>
+            </div>
+
+            <div class="vitrine-conteudo">
+
+                <!--Abas (filtro feito só com CSS, sem JS)-->
+                <div class="abas-home">
+
+                    <input type="radio" name="aba-vitrine" id="aba-todos" checked>
+                    <label for="aba-todos"><i class="fa-solid fa-folder"></i> CATÁLOGO</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-streetwear">
+                    <label for="aba-streetwear"><i class="fa-solid fa-shirt"></i> STREETWEAR</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-futebol">
+                    <label for="aba-futebol"><i class="fa-solid fa-futbol"></i> FUTEBOL</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-basquete">
+                    <label for="aba-basquete"><i class="fa-solid fa-basketball"></i> BASQUETE</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-nfl">
+                    <label for="aba-nfl"><i class="fa-solid fa-football"></i> NFL</label>
+
+                </div>
+
+                <div class="cards-modelos-home">
+
+                <article class="card-modelo streetwear"> <!--CAMISETA AC/DC OVERSIZED - BLACK-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-acdc.png" alt="Modelo vestindo Camiseta AC/DC Oversized - Black"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-acdc-black-frente.png" alt="Camiseta AC/DC Oversized - Black">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta AC/DC Oversized - Black</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$209,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo streetwear"> <!--CAMISETA OVERSIZED GRAND THEFT AUTO - BLACK-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-gta.png" alt="Modelo vestindo Camiseta Oversized Grand Theft Auto - Black"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-gtavi-novidades-frente.png" alt="Camiseta Oversized Grand Theft Auto - Black">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta Oversized Grand Theft Auto - Black</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$209,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo streetwear"> <!--CAMISETA OVERSIZED RACIONAIS MC'S - BLUE-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-racionais.png" alt="Modelo vestindo Camiseta Oversized Racionais Mc's - Blue"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-racionais-blue-novidades-frente.png" alt="Camiseta Oversized Racionais Mc's - Blue">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta Oversized Racionais Mc's - Blue</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$199,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo futebol"> <!--CAMISETA PELÉ OVERSIZED - DARKGRAY-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">DESTAQUE</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-pele.png" alt="Modelo vestindo Camiseta Pelé Oversized - DarkGray"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/esportes/img-pele-frente-esportes.png" alt="Camiseta Pelé Oversized - DarkGray">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · FUTEBOL</span>
+                        <h3>Camiseta Pelé Oversized - DarkGray</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$189,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo futebol"> <!--CAMISETA RONALDO FENÔMENO OVERSIZED - WHITE-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-fenomeno.png" alt="Modelo vestindo Camiseta Ronaldo Fenômeno Oversized - White"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-fenomeno-frente.png" alt="Camiseta Ronaldo Fenômeno Oversized - White">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · FUTEBOL</span>
+                        <h3>Camiseta Ronaldo Fenômeno Oversized - White</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$169,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo basquete"> <!--CAMISETA OVERSIZED KOBE BRYANT - WHITE-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-kobe.png" alt="Modelo vestindo Camiseta Oversized Kobe Bryant - White"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-kobe-novidades-frente.png" alt="Camiseta Oversized Kobe Bryant - White">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · BASQUETE</span>
+                        <h3>Camiseta Oversized Kobe Bryant - White</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$219,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo basquete"> <!--CAMISETA SHAQ LAKERS OVERSIZED - PURPLE-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-shaq.png" alt="Modelo vestindo Camiseta Shaq Lakers Oversized - Purple"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/novidades/img-shaq-novidades-frente.png" alt="Camiseta Shaq Lakers Oversized - Purple">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · BASQUETE</span>
+                        <h3>Camiseta Shaq Lakers Oversized - Purple</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$179,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo nfl"> <!--CAMISETA JACKSONVILLE JAGUARS OVERSIZED - YELLOW-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">DESTAQUE</span>
+                        <img class="foto-modelo" src="assets/images/index/modelo-jaguars.png" alt="Modelo vestindo Camiseta Jacksonville Jaguars Oversized - Yellow"> <!--ADICIONAR IMAGEM-->
+                        <img class="foto-produto" src="assets/images/esportes/img-jaguar-frente-esportes.png" alt="Camiseta Jacksonville Jaguars Oversized - Yellow">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · NFL</span>
+                        <h3>Camiseta Jacksonville Jaguars Oversized - Yellow</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$219,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Lookbook - Banner editorial-->
+        <section class="lookbook-home">
+
+            <div class="lookbook-home-textos">
+                <span class="lookbook-rotulo">LOOKBOOK ATLAS</span>
+                <h2>UM LOOK PARA <br><span>CADA HISTÓRIA.</span></h2>
+                <p>Do campo à rua, do treino à fé. Cada peça carrega uma história, e a escolha é sua.</p>
+
+                <div class="lookbook-botoes">
+                    <a class="btn-home-primario" href="pages/novidades.html">VER NOVIDADES →</a>
+                    <a class="btn-home-secundario" href="pages/colecoes.html">TODAS AS COLEÇÕES</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!--02 - Explore por universo-->
+        <section class="universos-home">
+
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">02</span>
+                    <div>
+                        <h2>EXPLORE POR UNIVERSO</h2>
+                        <p>Passe o mouse sobre um universo e descubra a coleção.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="painel-universos">
+
+                <!--FÉ-->
+                <a class="card-universo fe" href="pages/fe.html">
+                    <span class="universo-numero">01</span>
+                    <h3>FÉ</h3>
+                    <div class="universo-detalhes">
+                        <p>Estampas sacras e mensagens que carregam propósito.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--ACADEMIA-->
+                <a class="card-universo academia" href="pages/academia.html">
+                    <span class="universo-numero">02</span>
+                    <h3>ACADEMIA</h3>
+                    <div class="universo-detalhes">
+                        <p>Disciplina e treino em estampas para quem não para.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--FUTEBOL-->
+                <a class="card-universo futebol" href="pages/futebol.html">
+                    <span class="universo-numero">03</span>
+                    <h3>FUTEBOL</h3>
+                    <div class="universo-detalhes">
+                        <p>Lendas, craques e camisas que atravessam gerações.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--BASQUETE-->
+                <a class="card-universo basquete" href="pages/basquete.html">
+                    <span class="universo-numero">04</span>
+                    <h3>BASQUETE</h3>
+                    <div class="universo-detalhes">
+                        <p>Ícones das quadras, do clássico ao atual.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--NFL-->
+                <a class="card-universo nfl" href="pages/nfl.html">
+                    <span class="universo-numero">05</span>
+                    <h3>NFL</h3>
+                    <div class="universo-detalhes">
+                        <p>Camisas e uniformes do amado futebol americano.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--MOTORSPORT-->
+                <a class="card-universo motorsport" href="pages/motorsport.html">
+                    <span class="universo-numero">06</span>
+                    <h3>MOTORSPORT</h3>
+                    <div class="universo-detalhes">
+                        <p>Velocidade, pilotos e máquinas que viraram arte.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!--Banner de ofertas com modelo-->
+        <section class="oferta-home">
+
+            <div class="oferta-home-textos">
+                <span class="oferta-etiqueta">OFERTAS</span>
+                <h2>ATÉ <span>60% OFF</span></h2>
+                <p>Peças selecionadas com preço especial. Aproveite enquanto durar o estoque.</p>
+                <a class="btn-home-primario" href="pages/ofertas.html">VER OFERTAS →</a>
+            </div>
+
+            <div class="oferta-home-imagem"></div> <!--Imagem no CSS-->
+
+        </section>
+
+        <!--03 - No feed da ATLAS-->
+        <section class="instagram-home">
+
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">03</span>
+                    <div>
+                        <h2>NO FEED DA ATLAS</h2>
+                        <p>Acompanhe os looks e os lançamentos em @atlas.club.store.</p>
+                    </div>
+                </div>
+                <a class="link-ver-tudo" href="https://www.instagram.com/atlas.club.store/" target="_blank">SEGUIR NO INSTAGRAM →</a>
+            </div>
+
+            <div class="grade-instagram">
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/modelo-acdc.png" alt="Look com a camiseta AC/DC">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/universo-futebol.png" alt="Look de futebol">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/modelo-kobe.png" alt="Look com a camiseta Kobe Bryant">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/universo-fe.png" alt="Look da coleção Fé">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/modelo-gta.png" alt="Look com a camiseta GTA">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/index/universo-academia.png" alt="Look da coleção Academia">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!--Próximos drops (ativar via JS depois)-->
+        <section class="drops-home">
+
+            <div class="drops-home-texto">
+                <p>PRÓXIMOS DROPS</p>
+                <h3>SAIA NA FRENTE</h3>
+                <span>Receba as novidades da ATLAS antes de todo mundo.</span>
+            </div>
+
+            <form class="form-drops-home" action="#">
+                <input type="email" placeholder="Seu melhor e-mail" aria-label="E-mail" required>
+                <button type="submit">QUERO SER AVISADO</button>
+            </form>
+
+        </section>
+
+    </main>

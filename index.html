@@ -7,6 +7,7 @@
 
     <title>Atlas Store</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Biblioteca de ícones-->
 </head>
 
@@ -143,44 +144,401 @@
 
         </section>
 
-        <section class="menu-central">
-            <ul>
-                <li class="todos">
-                    <a href="pages/todos.html" class="ativo">
-                        <i class="fa-solid fa-folder"></i>
-                        CATÁLOGO
-                    </a>
-                </li>
-                <li class="streetwear">
-                    <a href="pages/streetwear.html">
-                        <i class="fa-solid fa-shirt"></i>
-                        STREETWEAR
-                    </a>
-                </li>
+        <!--01 - Vitrine com modelos-->
+        <section class="vitrine-home" id="vitrine">
 
-                <li class="futebol">
-                    <a href="pages/futebol.html">
-                        <i class="fa-regular fa-futbol"></i>
-                        FUTEBOL
-                    </a>
-                </li>
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">01</span>
+                    <div>
+                        <h2>OS MAIS DESEJADOS</h2>
+                        <p>As peças que estão fazendo sucesso, direto dos nossos modelos para o seu guarda-roupa.</p>
+                    </div>
+                </div>
+                <a class="link-ver-tudo" href="pages/colecoes.html">VER TODAS AS COLEÇÕES →</a>
+            </div>
 
-                <li class="nfl">
-                    <a href="pages/nfl.html">
-                        <i class="fa-solid fa-football"></i>
-                        NFL
-                    </a>
-                </li>
+            <div class="vitrine-conteudo">
 
-                <li class="basquete">
-                    <a href="pages/basquete.html">
-                        <i class="fa-solid fa-basketball"></i>
-                        BASQUETE
-                    </a>
-                </li>
+                <!--Abas (filtro feito só com CSS, sem JS)-->
+                <div class="abas-home">
 
-            </ul>
+                    <input type="radio" name="aba-vitrine" id="aba-todos" checked>
+                    <label for="aba-todos"><i class="fa-solid fa-folder"></i> CATÁLOGO</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-streetwear">
+                    <label for="aba-streetwear"><i class="fa-solid fa-shirt"></i> STREETWEAR</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-futebol">
+                    <label for="aba-futebol"><i class="fa-solid fa-futbol"></i> FUTEBOL</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-basquete">
+                    <label for="aba-basquete"><i class="fa-solid fa-basketball"></i> BASQUETE</label>
+
+                    <input type="radio" name="aba-vitrine" id="aba-nfl">
+                    <label for="aba-nfl"><i class="fa-solid fa-football"></i> NFL</label>
+
+                </div>
+
+                <div class="cards-modelos-home">
+
+                <article class="card-modelo basquete"> <!--CAMISETA LEBRON-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-lebron-frente-apresentacao.png" alt="Camiseta Lebron James Oversized - White">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-lebron-costas-apresentacao.png" alt="Camiseta Lebron James Oversized - White">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · BASQUETE</span>
+                        <h3>Camiseta Lebron James Oversized - White</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$179,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo streetwear"> <!--CAMISETA CHORÃO-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-chorao-frente-apresentacao.png" alt="Camiseta Chorão Oversized - Blue"> 
+                        <img class="foto-produto" src="assets/images/apresentacao/img-chorao-costas-apresentacao.png" alt="Camiseta Chorão Oversized - Blue">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta Chorão Oversized - Blue</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$209,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo streetwear"> <!--CAMISETA DOG ATLAS-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-dogatlas-frente-apresentacao.png" alt="Camiseta Loverboy Atlas Oversized - Red">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-dogatlas-costas-apresentacao.png" alt="Camiseta Loverboy Atlas Oversized - Red">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta Loverboy Atlas Oversized - Red</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$219,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo streetwear"> <!--CAMISETA MICHAEL-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-michael-frente-apresentacao.png" alt="Camiseta Michael Oversized - Black">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-michael-costas-apresentacao.png" alt="Camiseta Michael Oversized - Black">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · STREETWEAR</span>
+                        <h3>Camiseta Michael Jackson Oversized - Black</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$199,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo futebol"> <!--CAMISETA NEYMAR-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">DESTAQUE</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-neymargreen-frente-apresentacao.png" alt="Modelo vestindo Camiseta Neymar Oversized - Green">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-neymargreen-costas-apresentacao.png" alt="Camiseta Neymar Oversized - Green">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · FUTEBOL</span>
+                        <h3>Camiseta Neymar Jr Oversized - Green</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$189,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo futebol"> <!--CAMISETA RONALDO FENÔMENO OVERSIZED - WHITE-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-fenomeno-frente-apresentacao.png" alt="Modelo vestindo Camiseta Ronaldo Fenômeno Oversized - White">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-fenomeno-costas-apresentacao.png" alt="Camiseta Ronaldo Fenômeno Oversized - White">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · FUTEBOL</span>
+                        <h3>Camiseta Ronaldo Fenômeno Oversized - White</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$169,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo basquete"> <!--CAMISETA JORDAN-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">NOVO</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-jordan-frente-apresentacao.png" alt="Camiseta Michael Jordan Oversized - DarkGray">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-jordan-costas-apresentacao.png" alt="Camiseta Michael Jordan Oversized - DarkGray">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · BASQUETE</span>
+                        <h3>Camiseta Michael Jordan Oversized - DarkGray</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$179,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-modelo nfl"> <!--CAMISETA NFL-->
+                    <div class="card-modelo-imagem">
+                        <span class="selo-home">DESTAQUE</span>
+                        <img class="foto-modelo" src="assets/images/apresentacao/img-nfl-frente-apresentacao.png" alt="Camiseta Cincinnati Bengals Oversized - Orange">
+                        <img class="foto-produto" src="assets/images/apresentacao/img-nfl-costas-apresentacao.png" alt="Camiseta Cincinnati Bengals Oversized - Orange">
+                    </div>
+                    <div class="card-modelo-info">
+                        <span class="card-modelo-marca">ATLAS STORE · NFL</span>
+                        <h3>Camiseta Cincinnati Bengals Oversized - Orange</h3>
+                        <div class="card-modelo-tamanhos">
+                            <button class="tamanho-home selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho-home">M</button>
+                            <button class="tamanho-home">G</button>
+                            <button class="tamanho-home">GG</button>
+                        </div>
+                        <div class="card-modelo-rodape">
+                            <span class="preco-home">R$219,90</span>
+                            <button class="botao-adicionar"><i class="fa-solid fa-cart-shopping"></i> Adicionar</button>
+                        </div>
+                    </div>
+                </article>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!--Lookbook - Banner editorial-->
+        <section class="lookbook-home">
+
+            <div class="lookbook-home-textos">
+                <span class="lookbook-rotulo">LOOKBOOK ATLAS</span>
+                <h2>UM LOOK PARA <br><span>CADA HISTÓRIA.</span></h2>
+                <p>Do campo à rua, do treino à fé. Cada peça carrega uma história, e a escolha é sua.</p>
+
+                <div class="lookbook-botoes">
+                    <a class="btn-home-primario" href="pages/novidades.html">VER NOVIDADES →</a>
+                    <a class="btn-home-secundario" href="pages/colecoes.html">TODAS AS COLEÇÕES</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!--02 - Explore por universo-->
+        <section class="universos-home">
+
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">02</span>
+                    <div>
+                        <h2>EXPLORE POR UNIVERSO</h2>
+                        <p>Passe o mouse sobre um universo e descubra a coleção.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="painel-universos">
+
+                <!--FÉ-->
+                <a class="card-universo fe" href="pages/fe.html">
+                    <span class="universo-numero">01</span>
+                    <h3>FÉ</h3>
+                    <div class="universo-detalhes">
+                        <p>Estampas sacras e mensagens que carregam propósito.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--ACADEMIA-->
+                <a class="card-universo academia" href="pages/academia.html">
+                    <span class="universo-numero">02</span>
+                    <h3>ACADEMIA</h3>
+                    <div class="universo-detalhes">
+                        <p>Disciplina e treino em estampas para quem não para.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--FUTEBOL-->
+                <a class="card-universo futebol" href="pages/futebol.html">
+                    <span class="universo-numero">03</span>
+                    <h3>FUTEBOL</h3>
+                    <div class="universo-detalhes">
+                        <p>Lendas, craques e camisas que atravessam gerações.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--BASQUETE-->
+                <a class="card-universo basquete" href="pages/basquete.html">
+                    <span class="universo-numero">04</span>
+                    <h3>BASQUETE</h3>
+                    <div class="universo-detalhes">
+                        <p>Ícones das quadras, do clássico ao atual.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--NFL-->
+                <a class="card-universo nfl" href="pages/nfl.html">
+                    <span class="universo-numero">05</span>
+                    <h3>NFL</h3>
+                    <div class="universo-detalhes">
+                        <p>Camisas e uniformes do amado futebol americano.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+                <!--MOTORSPORT-->
+                <a class="card-universo motorsport" href="pages/motorsport.html">
+                    <span class="universo-numero">06</span>
+                    <h3>MOTORSPORT</h3>
+                    <div class="universo-detalhes">
+                        <p>Velocidade, pilotos e máquinas que viraram arte.</p>
+                        <span class="universo-link">EXPLORAR →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!--Banner de ofertas com modelo-->
+        <section class="oferta-home">
+
+            <div class="oferta-home-textos">
+                <span class="oferta-etiqueta">OFERTAS</span>
+                <h2>ATÉ <span>60% OFF</span></h2>
+                <p>Peças selecionadas com preço especial. Aproveite enquanto durar o estoque.</p>
+                <a class="btn-home-primario" href="pages/ofertas.html">VER OFERTAS →</a>
+            </div>
+
+            <div class="oferta-home-imagem"></div> <!--Imagem no CSS-->
+
+        </section>
+
+        <!--03 - No feed da ATLAS-->
+        <section class="instagram-home">
+
+            <div class="cabecalho-home">
+                <div class="cabecalho-home-texto">
+                    <span class="numero-home">03</span>
+                    <div>
+                        <h2>NO FEED DA ATLAS</h2>
+                        <p>Acompanhe os looks e os lançamentos em @atlas.club.store.</p>
+                    </div>
+                </div>
+                <a class="link-ver-tudo" href="https://www.instagram.com/atlas.club.store/" target="_blank">SEGUIR NO INSTAGRAM →</a>
+            </div>
+
+            <div class="grade-instagram">
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-acdc-apresentacao.png" alt="Look com a camiseta AC/DC">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-soccer-apresentacao.png" alt="Look de futebol">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-kobe-apresentacao.png" alt="Look com a camiseta Kobe Bryant">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-faith-apresentacao.png" alt="Look da coleção Fé">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-gta-apresentacao.png" alt="Look com a camiseta GTA">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+                <a class="foto-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                    <img src="assets/images/apresentacao/img-instagram-gym-apresentacao.png" alt="Look da coleção Academia">
+                    <span class="foto-insta-icone"><i class="fa-brands fa-instagram"></i></span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!--Próximos drops (ativar via JS depois)-->
+        <section class="drops-home">
+
+            <div class="drops-home-texto">
+                <p>PRÓXIMOS DROPS</p>
+                <h3>SAIA NA FRENTE</h3>
+                <span>Receba as novidades da ATLAS antes de todo mundo.</span>
+            </div>
+
+            <form class="form-drops-home" action="#">
+                <input type="email" placeholder="Seu melhor e-mail" aria-label="E-mail" required>
+                <button type="submit">QUERO SER AVISADO</button>
+            </form>
+
+        </section>
+
     </main>
 
     <footer class="rodape">
@@ -207,7 +565,7 @@
         <div class="rodape-dois">
             <h2 class="rodape-titulo">AJUDA</h2>
             <a class="rodape-links" href="pages/footer/perguntas-frequentes.html">Perguntas Frequentes</a>
-            <a class="rodape-links" href="pages/footer/politica-privacidade.html">Política de Privaciade</a>
+            <a class="rodape-links" href="pages/footer/politica-privacidade.html">Política de Privacidade</a>
         </div>
 
         <div class="rodape-tres">
@@ -218,7 +576,7 @@
 
         <div class="rodape-quatro">
             <h2 class="rodape-titulo">SIGA A ATLAS</h2>
-            <a class="rodape-insta" href="https://www.instagram.com/" target="_blank">
+            <a class="rodape-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
             </a>
             <a class="rodape-tiktok" href="https://www.tiktok.com/pt-BR/" target="_blank">
