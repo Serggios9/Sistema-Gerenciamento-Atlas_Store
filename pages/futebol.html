@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/futebol.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Biblioteca de ícones-->
+</head>
+<body>
+    <header>
+
+        <nav> <!--Cabeçalho Principal-->
+
+            <div> <!--Logo da loja-->
+
+                <a href="../index.html" class="logo">
+                    <h1>
+                        <span class="logo-atlas">ATLAS</span>
+                        <span class="logo-ponto">.</span>
+                        <span class="logo-store">STORE</span>
+                    </h1>
+                </a>
+
+            </div>
+
+            <div class="menu"> <!--Navegação principal-->
+
+                <ul>
+
+                    <li>
+                        <a href="novidades.html">NOVIDADES</a>
+                    </li>
+
+                    <li>
+                        <a href="esportes.html">ESPORTES</a>
+                    </li>
+
+                    <li>
+                        <a href="colecoes.html" class="page-colecoes">COLEÇÕES</a>
+                    </li>
+
+                    <li>
+                        <a href="ofertas.html">OFERTAS</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="actions"> <!--Ações do usuário-->
+
+                <ul>
+
+                    <li>
+                        <a href="../pages/login.html" class="login">
+                            <i class="fa-solid fa-user"></i> Login
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../pages/carrinho.html" class="carrinho">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <button class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!--Apresentação inicial-->
+        <section class="apresentacao-subcolecao">
+
+            <div class="apresentacao-textos-img-destaque">
+
+                <nav class="migalhas">
+                    <a href="colecoes.html">COLEÇÕES</a>
+                    <span>/</span>
+                    <strong>FUTEBOL</strong>
+                </nav>
+
+                <h2 class="texto-subcolecao">FUTEBOL</h2>
+
+                <h3 class="texto-subcolecao-frase">Uma paixão que atravessa gerações.</h3>
+
+            </div>
+
+        </section>
+
+        <!--Barra de navegação da coleção (fica fixa ao rolar)-->
+        <div class="subnav-colecao">
+            <a href="#lendas-antigas">LENDAS DO FUTEBOL ANTIGO</a>
+            <a href="#craques-atuais">CRAQUES DO FUTEBOL ATUAL</a>
+        </div>
+
+        <!--Lendas do futebol antigo-->
+        <section class="secao-produtos" id="lendas-antigas">
+
+            <div class="cabecalho-secao">
+                <div>
+                    <span class="rotulo-secao">LENDAS</span>
+                    <h2>Lendas do futebol antigo</h2>
+                    <p>Os nomes que fizeram história e eternizaram o jogo.</p>
+                </div>
+                <span class="contador-pecas">10 PEÇAS</span>
+            </div>
+
+            <div class="cards-subcolecao">
+
+                <div class="produto"> <!--CAMISETA PELÉ-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/esportes/img-pele-frente-esportes.png"
+                    data-front="../assets/images/esportes/img-pele-frente-esportes.png"
+                    data-back="../assets/images/esportes/img-pele-costas-esportes.png"
+                    alt="Camiseta Pelé Oversized - DarkGray">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Pelé Oversized - DarkGray</h3>
+                        <p>R$189,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA ZIZOU-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/esportes/img-zizou-frente-esportes.png"
+                    data-front="../assets/images/esportes/img-zizou-frente-esportes.png"
+                    data-back="../assets/images/esportes/img-zizou-costas-esportes.png"
+                    alt="Camiseta Zizou Oversized - LightBlue">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Zizou Oversized - LightBlue</h3>
+                        <p>R$209,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA RONALDO FENÔMENO-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/novidades/img-fenomeno-white-frente-novidades.png"
+                    data-front="../assets/images/novidades/img-fenomeno-white-frente-novidades.png"
+                    data-back="../assets/images/novidades/img-fenomeno-white-frente-novidades.png"
+                    alt="Camiseta Ronaldo Fenômeno Oversized - White">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Ronaldo Fenômeno Oversized - White</h3>
+                        <p>R$169,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA MAGIC GAÚCHO-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/esportes/img-gaucho-frente-esportes.png"
+                    data-front="../assets/images/esportes/img-gaucho-frente-esportes.png"
+                    data-back="../assets/images/esportes/img-gaucho-costas-esportes.png"
+                    alt="Camiseta Magic Gaúcho - Black">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Magic Gaúcho - Black</h3>
+                        <p>R$179,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA ADRIANO IMPERADOR-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/novidades/img-imperador-white-frente-novidades.png"
+                    data-front="../assets/images/novidades/img-imperador-white-frente-novidades.png"
+                    data-back="../assets/images/novidades/img-imperador-white-costas-novidades.png"
+                    alt="Camiseta Adriano Imperador Oversized - White">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Adriano Imperador Oversized - White</h3>
+                        <p>R$169,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA PAOLO MALDINI-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-maldini-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-maldini-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-maldini-costas-futebol.png"
+                    alt="Camiseta Paolo Maldini Oversized - Blue">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Paolo Maldini Oversized - Blue</h3>
+                        <p>R$179,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA CRUYFF-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-cruyff-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-cruyff-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-cruyff-costas-futebol.png"
+                    alt="Camiseta Johan Cruyff Oversized - Orange">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Johan Cruyff Oversized - Orange</h3>
+                        <p>R$159,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA ROMÁRIO-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-romario-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-romario-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-romario-costas-futebol.png"
+                    alt="Camiseta Romário Oversized - Black">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Romário Oversized - Black</h3>
+                        <p>R$189,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA OKOCHA NIGÉRIA-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-nigeria-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-nigeria-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-nigeria-costas-futebol.png"
+                    alt="Camiseta Nigéria Okocha Oversized - Green">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Nigéria Okocha Oversized - Green</h3>
+                        <p>R$179,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA CLARENCE SEEDORF-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-seedorf-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-seedorf-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-seedorf-costas-futebol.png"
+                    alt="Camiseta Clarence Seedorf Oversized - White">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Clarence Seedorf Oversized - White</h3>
+                        <p>R$149,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Craques do futebol atual-->
+        <section class="secao-produtos" id="craques-atuais">
+
+            <div class="cabecalho-secao">
+                <div>
+                    <span class="rotulo-secao">CRAQUES</span>
+                    <h2>Craques do futebol atual</h2>
+                    <p>Os astros de hoje, escrevendo novos capítulos no gramado.</p>
+                </div>
+                <span class="contador-pecas">10 PEÇAS</span>
+            </div>
+
+            <div class="cards-subcolecao">
+
+                <div class="produto"> <!--CAMISETA NEYMAR BRANCA-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/esportes/img-neymar-frente-esportes.png"
+                    data-front="../assets/images/esportes/img-neymar-frente-esportes.png"
+                    data-back="../assets/images/esportes/img-neymar-costas-esportes.png"
+                    alt="Camiseta Neymar JR - White">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Neymar JR - White</h3>
+                        <p>R$179,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA ERLING HAALAND-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-haaland-frente-futebol.png"
+                    data-front="../assets/images/esportes/img-haaland-frente-futebol.png"
+                    data-back="../assets/images/esportes/img-haaland-costas-futebol.png"
+                    alt="Camiseta Erling Haaland Oversized - Red">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Erling Haaland Oversized - Red</h3>
+                        <p>R$189,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA SOCCER LEGENDS-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/esportes/img-triofutebol-frente-esportes.png"
+                    data-front="../assets/images/esportes/img-triofutebol-frente-esportes.png"
+                    data-back="../assets/images/esportes/img-triofutebol-costas-esportes.png"
+                    alt="Camiseta Soccer Legends Oversized - White">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Soccer Legends Oversized - White</h3>
+                        <p>R$209,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA ENDRICK-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-endrick-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-endrick-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-endrick-costas-futebol.png"
+                    alt="Camiseta Endrick Oversized - Blue">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Endrick Oversized - Blue</h3>
+                        <p>R$169,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA MBAPPÉ-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-mbappe-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-mbappe-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-mbappe-costas-futebol.png"
+                    alt="Camiseta Kylian Mbappé Oversized - Beige">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Kylian Mbappé Oversized - Beige</h3>
+                        <p>R$139,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA CR7-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-cristiano-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-cristiano-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-cristiano-costas-futebol.png"
+                    alt="Camiseta Cristiano Ronaldo Oversized - Black">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Cristiano Ronaldo Oversized - Black</h3>
+                        <p>R$209,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA LAMINE YAMAL-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-lamine-frente-atlas.png"
+                    data-front="../assets/images/futebol/img-lamine-frente-atlas.png"
+                    data-back="../assets/images/futebol/img-lamine-costas-atlas.png"
+                    alt="Camiseta Lamine Yamal Oversized - Pink">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Lamine Yamal Oversized - Pink</h3>
+                        <p>R$179,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA VINI JR-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-vini-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-vini-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-vini-costas-futebol.png"
+                    alt="Camiseta Vinícius JR Oversized - Green">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Vinícius JR Oversized - Green</h3>
+                        <p>R$139,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA MESSI-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-messi-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-messi-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-messi-costas-futebol.png"
+                    alt="Camiseta Lionel Messi Oversized - Black">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Lionel Messi Oversized - Black</h3>
+                        <p>R$199,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto"> <!--CAMISETA BELLINGHAM-->
+                    <button class="seta seta-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+                    <img
+                    src="../assets/images/futebol/img-bellingham-frente-futebol.png"
+                    data-front="../assets/images/futebol/img-bellingham-frente-futebol.png"
+                    data-back="../assets/images/futebol/img-bellingham-costas-futebol.png"
+                    alt="Camiseta Jude Bellingham Oversized - Red">
+                    <button class="seta seta-direita"><i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="info-produto">
+                        <h3>Camiseta Jude Bellingham Oversized - Red</h3>
+                        <p>R$189,90</p>
+                        <p class="secao-label secao-label-tamanho">Selecione o Tamanho</p>
+                        <div class="tamanhos">
+                            <button class="tamanho selecionado">P</button> <!--TIRAR SELECIONADO DEPOIS-ATIVAR COM JS-->
+                            <button class="tamanho">M</button>
+                            <button class="tamanho">G</button>
+                            <button class="tamanho">GG</button>
+                        </div>
+                        <div class="area-botao">
+                            <button>ADICIONAR AO CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Continue explorando-->
+        <section class="outras-colecoes">
+            <p>CONTINUE EXPLORANDO</p>
+            <a href="basquete.html">BASQUETE</a>
+            <a href="nfl.html">NFL</a>
+            <a href="motorsport.html">MOTORSPORT</a>
+            <a href="streetwear.html">STREETWEAR</a>
+            <a href="fe.html">FÉ</a>
+            <a href="academia.html">ACADEMIA</a>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="logo-rodape"> <!--Logo da loja-->
+
+            <a href="../index.html" class="logo">
+                <h1>
+                    <span class="logo-atlas">ATLAS</span>
+                    <span class="logo-ponto">.</span>
+                    <span class="logo-store">STORE</span>
+                </h1>
+            </a>
+
+        </div>
+
+
+        <div class="rodape-um">
+            <h2 class="rodape-titulo">ATENDIMENTO</h2>
+            <a class="rodape-links" href="./footer/fale-conosco.html">Fale Conosco</a>
+            <a class="rodape-links" href="./footer/devolucoes.html">Trocas e Devoluções</a>
+        </div>
+
+        <div class="rodape-dois">
+            <h2 class="rodape-titulo">AJUDA</h2>
+            <a class="rodape-links" href="./footer/perguntas-frequentes.html">Perguntas Frequentes</a>
+            <a class="rodape-links" href="./footer/politica-privacidade.html">Política de Privacidade</a>
+        </div>
+
+        <div class="rodape-tres">
+            <h2 class="rodape-titulo">INSTITUCIONAL</h2>
+            <a class="rodape-links" href="./footer/sobre.html">Sobre a ATLAS</a>
+            <a class="rodape-links" href="./footer/trabalhe-conosco.html">Trabalhe Conosco</a>
+        </div>
+
+        <div class="rodape-quatro">
+            <h2 class="rodape-titulo">SIGA A ATLAS</h2>
+            <a class="rodape-insta" href="https://www.instagram.com/atlas.club.store/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="rodape-tiktok" href="https://www.tiktok.com/pt-BR/" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a class="rodape-youtube" href="https://www.youtube.com/" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+
+
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>

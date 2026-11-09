@@ -322,8 +322,6 @@ main {
 
 /*Estilos locais do Atlas Store-Index (seções após o hero)*/
 
-/*FUNDO PRETO: sem isso, a margem de 15px do rodapé (.rodape margin-top)
-  deixa aparecer o fundo branco padrão do navegador, formando a faixa branca*/
 body {
     background-color: black;
 }
@@ -538,7 +536,6 @@ main {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3 / 4;
-    background-color: #1a1a1a; /*cor de reserva enquanto não há imagem*/
 }
 
 .card-modelo-imagem img {
@@ -747,7 +744,6 @@ main {
     padding: 20px 16px;
     border: 1px solid #222;
     border-radius: 12px;
-    background-color: #0d0d0d; /*cor de reserva enquanto não há imagem*/
     text-decoration: none;
     transition: flex 0.55s ease, border-color 0.3s ease;
 }
